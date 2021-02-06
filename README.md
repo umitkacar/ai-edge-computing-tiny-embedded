@@ -54,3 +54,7 @@ To provide an AI-Driven Optimizer to make Deep Neural Networks:
 - energy-efficient 
 - from cloud to edge computing
 - without compromising accuracy
+
+## PAPER
+
+https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf
