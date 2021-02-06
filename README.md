@@ -64,3 +64,7 @@ https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf
 Convergence of Edge Computing and Deep Learning: A Comprehensive Survey
 
 https://arxiv.org/pdf/1907.08349.pdf
+
+Machine Learning at the Network Edge: A Survey
+
+https://arxiv.org/pdf/1908.00080.pdf
