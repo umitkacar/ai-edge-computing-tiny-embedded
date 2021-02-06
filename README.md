@@ -24,6 +24,8 @@ ARM
 
 TensorRT
 
+https://github.com/NVIDIA/TensorRT/tree/release/7.1
+
 https://developer.nvidia.com/blog/tensorrt-integration-speeds-tensorflow-inference/
 
 OpenCL
