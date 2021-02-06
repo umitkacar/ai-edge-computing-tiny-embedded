@@ -24,6 +24,8 @@ ARM
 
 TensorRT
 
+https://developer.nvidia.com/blog/tensorrt-integration-speeds-tensorflow-inference/
+
 OpenCL
 
 Vulkan
