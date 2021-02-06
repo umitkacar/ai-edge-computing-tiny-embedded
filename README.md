@@ -8,4 +8,5 @@ To provide an AI-Driven Optimizer to make Deep Neural Networks:
 - faster, 
 - smaller,
 - energy-efficient 
-- from cloud to edge computing.
+- from cloud to edge computing
+- without compromising accuracy
