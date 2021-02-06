@@ -40,6 +40,10 @@ XNNPack
 
 https://github.com/google/XNNPACK
 
+Samsung ONE (On-device Neural Engine)
+
+https://github.com/Samsung/ONE
+
 ## COMPANY
 
 https://www.deeplite.ai/
