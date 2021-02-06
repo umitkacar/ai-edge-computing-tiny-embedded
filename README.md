@@ -57,4 +57,10 @@ To provide an AI-Driven Optimizer to make Deep Neural Networks:
 
 ## PAPER
 
+Deep Learning With Edge Computing: A Review
+
 https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf
+
+Convergence of Edge Computing and Deep Learning: A Comprehensive Survey
+
+https://arxiv.org/pdf/1907.08349.pdf
