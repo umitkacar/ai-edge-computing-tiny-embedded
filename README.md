@@ -22,6 +22,8 @@ RISC-V
 
 ARM
 
+TensorRT
+
 OpenCL
 
 Vulkan
