@@ -1,5 +1,7 @@
 # AI - Edge Computing
 
+[MCU-Net](https://github.com/mit-han-lab/mcunet)
+
 TVM
 
 https://github.com/apache/tvm
