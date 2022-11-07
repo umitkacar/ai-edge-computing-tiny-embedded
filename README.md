@@ -2,6 +2,8 @@
 
 [ncnn](https://github.com/Tencent/ncnn)
 
+[nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
+
 [convert model](https://convertmodel.com/)
 
 [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
