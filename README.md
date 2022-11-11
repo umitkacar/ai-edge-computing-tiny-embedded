@@ -10,6 +10,8 @@
 
 [MCU-Net](https://github.com/mit-han-lab/mcunet)
 
+[Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
+
 TVM
 
 https://github.com/apache/tvm
