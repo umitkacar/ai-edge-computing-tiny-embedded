@@ -1,5 +1,7 @@
 # AI - Edge Computing
 
+[mace](https://github.com/xiaomi/mace)
+
 [ncnn](https://github.com/Tencent/ncnn)
 
 [nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
