@@ -1,5 +1,7 @@
 # AI - Edge Computing
 
+[openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
+
 [mace](https://github.com/xiaomi/mace)
 
 [ncnn](https://github.com/Tencent/ncnn)
