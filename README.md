@@ -1,6 +1,6 @@
 # AI - Edge Computing
 
-[ONNX Runtime C++3](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
+[ONNX Runtime C++](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
 
 https://github.com/AlgoHunt/VQRF
 
