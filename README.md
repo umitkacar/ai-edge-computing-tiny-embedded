@@ -1,5 +1,7 @@
 # AI - Edge Computing
 
+- https://github.com/csarron/awesome-emdl
+
 [ONNX Runtime C++](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
 
 https://github.com/AlgoHunt/VQRF
