@@ -26,7 +26,7 @@ https://github.com/AlgoHunt/VQRF
 
 [EtinyNet](https://github.com/aztc/EtinyNet)
 
-<img src="./tinyML.png" alt="tinyML" width="320">
+<img src="./tinyML.png" alt="tinyML" width="640">
 
 TVM
 
