@@ -26,6 +26,8 @@ https://github.com/AlgoHunt/VQRF
 
 [EtinyNet](https://github.com/aztc/EtinyNet)
 
+<img src="./assets/image_unsplash.jpg" alt="alt yazı" width="320">
+
 TVM
 
 https://github.com/apache/tvm
