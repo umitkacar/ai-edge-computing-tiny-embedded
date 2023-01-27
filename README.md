@@ -92,3 +92,5 @@ To provide an AI-Driven Optimizer to make Deep Neural Networks:
 - [EtinyNet: Extremely Tiny Network for TinyML](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
 
 - [An Ultra-low Power TinyML System for Real-time Visual Processing at Edge](https://arxiv.org/pdf/2207.04663.pdf)
+
+- [Awesome - Embedded and mobile deep learning](https://github.com/csarron/awesome-emdl/blob/master/README.md)
