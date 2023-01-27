@@ -1,7 +1,5 @@
 # AI - Edge Computing
 
-- https://github.com/csarron/awesome-emdl
-
 - https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
 
 - https://mcunet.mit.edu/
