@@ -83,16 +83,12 @@ To provide an AI-Driven Optimizer to make Deep Neural Networks:
 
 ## PAPER
 
-Deep Learning With Edge Computing: A Review
+- [Deep Learning With Edge Computing: A Review](https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf)
 
-https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf
+- [Convergence of Edge Computing and Deep Learning: A Comprehensive Survey](https://arxiv.org/pdf/1907.08349.pdf)
 
-Convergence of Edge Computing and Deep Learning: A Comprehensive Survey
+- [Machine Learning at the Network Edge: A Survey](https://arxiv.org/pdf/1908.00080.pdf)
 
-https://arxiv.org/pdf/1907.08349.pdf
+- [EtinyNet: Extremely Tiny Network for TinyML](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
 
-Machine Learning at the Network Edge: A Survey
-
-https://arxiv.org/pdf/1908.00080.pdf
-
-[EtinyNet: Extremely Tiny Network for TinyML](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
+- [An Ultra-low Power TinyML System for Real-time Visual Processing at Edge](https://arxiv.org/pdf/2207.04663.pdf)
