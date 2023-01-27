@@ -4,6 +4,8 @@
 
 - https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
 
+- https://mcunet.mit.edu/
+
 [ONNX Runtime C++](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
 
 https://github.com/AlgoHunt/VQRF
