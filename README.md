@@ -94,3 +94,5 @@ https://arxiv.org/pdf/1907.08349.pdf
 Machine Learning at the Network Edge: A Survey
 
 https://arxiv.org/pdf/1908.00080.pdf
+
+[EtinyNet: Extremely Tiny Network for TinyML](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
