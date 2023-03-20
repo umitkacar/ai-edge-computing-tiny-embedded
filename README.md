@@ -28,6 +28,10 @@ https://github.com/AlgoHunt/VQRF
 
 <img src="./tinyML.png" alt="tinyML" width="640">
 
+## LIGHTWEIGHT DETECTOR
+
+- [PP-PicoDet: A Better Real-Time Object Detector on Mobile Devices ](https://arxiv.org/pdf/2111.00902.pdf)
+
 TVM
 
 https://github.com/apache/tvm
