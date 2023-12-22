@@ -6,6 +6,8 @@
 
 [ONNX Runtime C++](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
 
+- https://github.com/PaddlePaddle/FastDeploy
+
 https://github.com/AlgoHunt/VQRF
 
 [openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
