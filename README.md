@@ -1,6 +1,6 @@
 # AI - Edge Computing
 
-## Onnxruntime-TensorRT
+## Onnxruntime
 
 - https://leimao.github.io/blog/ONNX-Runtime-CPP-Inference/
 - https://github.com/cassiebreviu/cpp-onnxruntime-resnet-console-app
@@ -17,52 +17,50 @@
 - https://huggingface.co/models?sort=trending&search=onnx
 - https://neuml.github.io/txtai/pipeline/train/hfonnx/
 
-### FIXED CODES
+### FIXED BUGS
 - https://github.com/ultralytics/yolov5/issues/916
 - https://zhuanlan.zhihu.com/p/466677699
 - https://github.com/hpc203?tab=repositories
 - https://velog.io/@dnchoi/ONNX-runtime-install
 
-### DOCUMENT
+### DOCUMENT ONNXRUNTIME
 - https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
 - https://onnxruntime.ai/docs/api/python/on_device_training/training_artifacts.html
 - https://pytorch.org/tutorials/beginner/onnx/onnx_registry_tutorial.html
 
-### ONNXRUNTIME
+### ONNXRUNTIME compatibility (ONNX, OPSET, TensorRT, CUDA, CUDNN)
 - https://onnxruntime.ai/docs/reference/compatibility.html
 - https://github.com/onnx/onnx/blob/main/docs/Versioning.md
 - https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html
   
-### TENSORRT
+## TENSORRT
 - https://onnxruntime.ai/docs/execution-providers/TensorRT-ExecutionProvider.html#requirements
 - https://gitee.com/arnoldfychen/onnxruntime/blob/master/docs/execution_providers/TensorRT-ExecutionProvider.md#specify-tensorrt-engine-cache-path
 
-### FASTDEPLOY
-
+## FASTDEPLOY
 - https://github.com/PaddlePaddle/FastDeploy
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/en/build_and_install/download_prebuilt_libraries.md
 
-### MCU
+## MCU
 - [MCU](https://mcunet.mit.edu/)
 - [MCU-Net](https://github.com/mit-han-lab/mcunet)
 
-### COMPRESSION
+## COMPRESSION
 - https://github.com/AlgoHunt/VQRF
 
-### OPENCV
+## OPENCV
 - [openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
 - [Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
 
-### MACE
+## MACE
 - [mace](https://github.com/xiaomi/mace)
 
-### NCNN
+## NCNN
 [ncnn](https://github.com/Tencent/ncnn)
 [nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
 [convert model](https://convertmodel.com/)
 
-### COREML - Collection
-- [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
+## COREML 
 - https://github.com/tucan9389/SemanticSegmentation-CoreML
 - https://github.com/john-rocky/CoreML-Models#u2net
 - https://github.com/likedan/Awesome-CoreML-Models
@@ -81,40 +79,43 @@
 - https://github.com/runwayml/stable-diffusion
 - https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
-### LIGHTWEIGHT DETECTOR
+### Performance Tool
+- [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
+
+## LIGHTWEIGHT DETECTOR
 - [PP-PicoDet: A Better Real-Time Object Detector on Mobile Devices ](https://arxiv.org/pdf/2111.00902.pdf)
 - [EtinyNet](https://github.com/aztc/EtinyNet)
 - <img src="./tinyML.png" alt="tinyML" width="640">
 
-### TVM
+## TVM
 - https://github.com/apache/tvm
   
-### LLVM
+## LLVM
 - https://github.com/llvm/llvm-project
 
-### ARM-NN
+## ARM-NN
 - https://github.com/ARM-software/armnn
 - https://www.youtube.com/watch?v=QuNOaFLobSg
 
-### CMSIS-NN
+## CMSIS-NN
 - https://github.com/ARM-software/CMSIS_5
 
-### RISC-V
+## RISC-V
 
-### ARM
+## ARM
 
-### OpenCL
+## OpenCL
 
-### Vulkan
+## Vulkan
 
-### Cuda
+## Cuda
 
-### Metal
+## Metal
 
-### XNNPack
+## XNNPack
 - https://github.com/google/XNNPACK
 
-### Samsung ONE (On-device Neural Engine)
+## Samsung ONE (On-device Neural Engine)
 - https://github.com/Samsung/ONE
 
 ## COMPANY
