@@ -61,8 +61,25 @@
 [nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
 [convert model](https://convertmodel.com/)
 
-### COREML
-[Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
+### COREML - Collection
+- [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
+- https://github.com/tucan9389/SemanticSegmentation-CoreML
+- https://github.com/john-rocky/CoreML-Models#u2net
+- https://github.com/likedan/Awesome-CoreML-Models
+- https://github.com/SwiftBrain/awesome-CoreML-models
+- https://github.com/PeterL1n/RobustVideoMatting
+- https://coremltools.readme.io/docs/pytorch-conversion
+- https://github.com/hollance/CoreMLHelpers
+- https://developer.apple.com/machine-learning/api/
+- https://github.com/vladimir-chernykh/coreml-performance
+
+#### CoreML - Stable Diffusion
+- https://github.com/apple/ml-stable-diffusion
+- https://huggingface.co/stabilityai/stable-diffusion-2-base [1]
+- https://github.com/Stability-AI/stablediffusion [1]
+- https://huggingface.co/CompVis/stable-diffusion-v1-4 [2]
+- https://github.com/runwayml/stable-diffusion
+- https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 ### LIGHTWEIGHT DETECTOR
 - [PP-PicoDet: A Better Real-Time Object Detector on Mobile Devices ](https://arxiv.org/pdf/2111.00902.pdf)
