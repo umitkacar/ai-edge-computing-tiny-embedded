@@ -50,10 +50,11 @@
 - https://github.com/AlgoHunt/VQRF
 
 ### OPENCV
-[openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
-[Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
+- [openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
+- [Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
 
-[mace](https://github.com/xiaomi/mace)
+### MACE
+- [mace](https://github.com/xiaomi/mace)
 
 ### NCNN
 [ncnn](https://github.com/Tencent/ncnn)
@@ -64,26 +65,21 @@
 [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
 
 ### LIGHTWEIGHT DETECTOR
-
 - [PP-PicoDet: A Better Real-Time Object Detector on Mobile Devices ](https://arxiv.org/pdf/2111.00902.pdf)
 - [EtinyNet](https://github.com/aztc/EtinyNet)
 - <img src="./tinyML.png" alt="tinyML" width="640">
 
 ### TVM
-
 - https://github.com/apache/tvm
-
+  
 ### LLVM
-
 - https://github.com/llvm/llvm-project
 
 ### ARM-NN
-
 - https://github.com/ARM-software/armnn
 - https://www.youtube.com/watch?v=QuNOaFLobSg
 
 ### CMSIS-NN
-
 - https://github.com/ARM-software/CMSIS_5
 
 ### RISC-V
@@ -99,17 +95,15 @@
 ### Metal
 
 ### XNNPack
-
 - https://github.com/google/XNNPACK
 
 ### Samsung ONE (On-device Neural Engine)
-
 - https://github.com/Samsung/ONE
 
 ## COMPANY
 
-https://www.deeplite.ai/
-
+- https://www.deeplite.ai/
+  
 To provide an AI-Driven Optimizer to make Deep Neural Networks:
 - faster, 
 - smaller,
