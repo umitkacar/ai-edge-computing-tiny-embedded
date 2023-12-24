@@ -1,82 +1,110 @@
 # AI - Edge Computing
 
-- https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+## Onnxruntime-TensorRT
 
-- https://mcunet.mit.edu/
+- https://leimao.github.io/blog/ONNX-Runtime-CPP-Inference/
+- https://github.com/cassiebreviu/cpp-onnxruntime-resnet-console-app
+- https://github.com/k2-gc/onnxruntime-cpp-example
+- https://github.com/Rohithkvsp/OnnxRuntimeAndorid
+- https://docs.ultralytics.com/modes/export/#arguments
+- https://github.com/ultralytics/ultralytics/issues/1852
+- https://github.com/UNeedCryDear/yolov8-opencv-onnxruntime-cpp
+- https://github.com/hpc203/yolov6-opencv-onnxruntime/tree/main
+- https://github.com/ultralytics/ultralytics/tree/main/examples
+- https://github.com/ultralytics/ultralytics/tree/main/examples/YOLOv8-ONNXRuntime-CPP
+- https://github.com/ifzhang/ByteTrack/blob/main/deploy/ONNXRuntime/onnx_inference.py
+- https://github.com/Amyheart/yolo-onnxruntime-cpp
+- https://huggingface.co/models?sort=trending&search=onnx
+- https://neuml.github.io/txtai/pipeline/train/hfonnx/
 
-[ONNX Runtime C++](https://github.com/DefTruth/lite.ai.toolkit#lite.ai.toolkit-segmentation)
+### FIXED CODES
+- https://github.com/ultralytics/yolov5/issues/916
+- https://zhuanlan.zhihu.com/p/466677699
+- https://github.com/hpc203?tab=repositories
+- https://velog.io/@dnchoi/ONNX-runtime-install
+
+### DOCUMENT
+- https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
+- https://onnxruntime.ai/docs/api/python/on_device_training/training_artifacts.html
+- https://pytorch.org/tutorials/beginner/onnx/onnx_registry_tutorial.html
+
+### ONNXRUNTIME
+- https://onnxruntime.ai/docs/reference/compatibility.html
+- https://github.com/onnx/onnx/blob/main/docs/Versioning.md
+- https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html
+  
+### TENSORRT
+- https://onnxruntime.ai/docs/execution-providers/TensorRT-ExecutionProvider.html#requirements
+- https://gitee.com/arnoldfychen/onnxruntime/blob/master/docs/execution_providers/TensorRT-ExecutionProvider.md#specify-tensorrt-engine-cache-path
+
+### FASTDEPLOY
 
 - https://github.com/PaddlePaddle/FastDeploy
+- https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/en/build_and_install/download_prebuilt_libraries.md
 
-https://github.com/AlgoHunt/VQRF
+### MCU
+- [MCU](https://mcunet.mit.edu/)
+- [MCU-Net](https://github.com/mit-han-lab/mcunet)
 
+### COMPRESSION
+- https://github.com/AlgoHunt/VQRF
+
+### OPENCV
 [openCV C++](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
+[Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
 
 [mace](https://github.com/xiaomi/mace)
 
+### NCNN
 [ncnn](https://github.com/Tencent/ncnn)
-
 [nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
-
 [convert model](https://convertmodel.com/)
 
+### COREML
 [Performance Inference Time IOS](https://github.com/vladimir-chernykh/coreml-performance)
 
-[MCU-Net](https://github.com/mit-han-lab/mcunet)
-
-[Build-OpenCV-C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
-
-[EtinyNet](https://github.com/aztc/EtinyNet)
-
-<img src="./tinyML.png" alt="tinyML" width="640">
-
-## LIGHTWEIGHT DETECTOR
+### LIGHTWEIGHT DETECTOR
 
 - [PP-PicoDet: A Better Real-Time Object Detector on Mobile Devices ](https://arxiv.org/pdf/2111.00902.pdf)
+- [EtinyNet](https://github.com/aztc/EtinyNet)
+- <img src="./tinyML.png" alt="tinyML" width="640">
 
-TVM
+### TVM
 
-https://github.com/apache/tvm
+- https://github.com/apache/tvm
 
-LLVM
+### LLVM
 
-https://github.com/llvm/llvm-project
+- https://github.com/llvm/llvm-project
 
-ARM-NN
+### ARM-NN
 
-https://github.com/ARM-software/armnn
+- https://github.com/ARM-software/armnn
+- https://www.youtube.com/watch?v=QuNOaFLobSg
 
-https://www.youtube.com/watch?v=QuNOaFLobSg
+### CMSIS-NN
 
-CMSIS-NN
+- https://github.com/ARM-software/CMSIS_5
 
-https://github.com/ARM-software/CMSIS_5
+### RISC-V
 
-RISC-V
+### ARM
 
-ARM
+### OpenCL
 
-TensorRT
+### Vulkan
 
-https://github.com/NVIDIA/TensorRT/tree/release/7.1
+### Cuda
 
-https://developer.nvidia.com/blog/tensorrt-integration-speeds-tensorflow-inference/
+### Metal
 
-OpenCL
+### XNNPack
 
-Vulkan
+- https://github.com/google/XNNPACK
 
-Cuda
+### Samsung ONE (On-device Neural Engine)
 
-Metal
-
-XNNPack
-
-https://github.com/google/XNNPACK
-
-Samsung ONE (On-device Neural Engine)
-
-https://github.com/Samsung/ONE
+- https://github.com/Samsung/ONE
 
 ## COMPANY
 
