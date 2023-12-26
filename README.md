@@ -20,7 +20,7 @@
 - https://github.com/NVIDIA/TensorRT/tree/main/samples/trtexec
 
 ### YOLO - POSE - DETECT - SEGMENT - CLASSIFY
-- https://github.com/FourierMourier/yolov8-onnx-cpp/blob/main/src/main.cpp
+- https://github.com/FourierMourier/yolov8-onnx-cpp/tree/main (Python + C++)
 - https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp
 - https://github.com/triple-Mu/YOLOv8-TensorRT/blob/main/csrc/pose/normal/main.cpp
 - https://github.com/Amyheart/yolo-onnxruntime-cpp
