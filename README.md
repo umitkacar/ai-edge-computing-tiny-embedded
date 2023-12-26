@@ -11,6 +11,10 @@
 - https://neuml.github.io/txtai/pipeline/train/hfonnx/
 - https://docs.ultralytics.com/modes/export/#arguments
 
+### YOLO - TENSORRT - POSE - DETECT - SEGMENT
+
+- https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP
+
 ### YOLO - POSE - DETECT - SEGMENT - CLASSIFY
 - https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp
 - https://github.com/Amyheart/yolo-onnxruntime-cpp
