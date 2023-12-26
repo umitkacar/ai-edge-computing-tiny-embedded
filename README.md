@@ -70,6 +70,7 @@
 - [mace](https://github.com/xiaomi/mace)
 
 ## NCNN
+- https://github.com/wkt/YoloMobile
 - [ncnn](https://github.com/Tencent/ncnn)
 - [nccn c++](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
 - [convert model](https://convertmodel.com/)
