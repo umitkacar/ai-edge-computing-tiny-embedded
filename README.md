@@ -18,6 +18,7 @@
 
 ### YOLO - POSE - DETECT - SEGMENT - CLASSIFY
 - https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp
+- https://github.com/triple-Mu/YOLOv8-TensorRT/blob/main/csrc/pose/normal/main.cpp
 - https://github.com/Amyheart/yolo-onnxruntime-cpp
 - https://github.com/UNeedCryDear/yolov8-opencv-onnxruntime-cpp
 - https://github.com/ultralytics/ultralytics/tree/main/examples/YOLOv8-ONNXRuntime-CPP
