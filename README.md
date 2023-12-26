@@ -16,6 +16,7 @@
 - https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP
 - https://github.com/cyrusbehr/tensorrt-cpp-api
 - https://github.com/mattiasbax/yolo-pose_cpp
+- https://github.com/triple-Mu/YOLOv8-TensorRT (Python)
 
 ### YOLO - POSE - DETECT - SEGMENT - CLASSIFY
 - https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp
