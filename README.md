@@ -16,7 +16,8 @@
 - https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP
 - https://github.com/cyrusbehr/tensorrt-cpp-api
 - https://github.com/mattiasbax/yolo-pose_cpp
-- https://github.com/triple-Mu/YOLOv8-TensorRT (Python)
+- https://github.com/triple-Mu/YOLOv8-TensorRT (Python + C++ + TensorRT)
+- https://github.com/NVIDIA/TensorRT/tree/main/samples/trtexec
 
 ### YOLO - POSE - DETECT - SEGMENT - CLASSIFY
 - https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp
@@ -38,6 +39,7 @@
 - https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
 - https://onnxruntime.ai/docs/api/python/on_device_training/training_artifacts.html
 - https://pytorch.org/tutorials/beginner/onnx/onnx_registry_tutorial.html
+- https://github.com/NVIDIA/TensorRT/tree/main/samples/trtexec
 
 ### ONNXRUNTIME compatibility (ONNX, OPSET, TensorRT, CUDA, CUDNN)
 - https://onnxruntime.ai/docs/reference/compatibility.html
