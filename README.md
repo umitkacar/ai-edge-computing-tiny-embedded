@@ -11,6 +11,11 @@
 - https://neuml.github.io/txtai/pipeline/train/hfonnx/
 - https://docs.ultralytics.com/modes/export/#arguments
 
+### QUANTIZATION
+- https://github.com/microsoft/onnxruntime/tree/main/onnxruntime/python/tools/quantization
+- https://onnxruntime.ai/docs/performance/model-optimizations/float16.html
+- https://github.com/microsoft/onnxruntime-inference-examples/tree/main/quantization
+
 ### YOLO - TENSORRT - POSE - DETECT - SEGMENT
 
 - https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP
