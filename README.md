@@ -60,6 +60,11 @@
 - https://github.com/PaddlePaddle/FastDeploy
 - https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/en/build_and_install/download_prebuilt_libraries.md
 
+## DEEPSPARSE - SPARSEML
+- https://neuralmagic.com/blog/benchmark-yolov5-on-cpus-with-deepsparse/
+- https://github.com/neuralmagic/sparseml/tree/main
+- https://github.com/neuralmagic/deepsparse
+  
 ## MCU
 - [MCU](https://mcunet.mit.edu/)
 - [MCU-Net](https://github.com/mit-han-lab/mcunet)
