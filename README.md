@@ -11,6 +11,9 @@
 - https://neuml.github.io/txtai/pipeline/train/hfonnx/
 - https://docs.ultralytics.com/modes/export/#arguments
 
+### YOLO -NAS
+-https://github.com/jason-li-831202/YOLO-NAS-onnxruntime
+
 ### QUANTIZATION
 - https://github.com/microsoft/onnxruntime/tree/main/onnxruntime/python/tools/quantization
 - https://onnxruntime.ai/docs/performance/model-optimizations/float16.html
