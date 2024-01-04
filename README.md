@@ -21,6 +21,7 @@
 
 ### YOLO - TENSORRT - POSE - DETECT - SEGMENT
 
+- https://www.youtube.com/watch?v=Z0n5aLmcRHQ
 - https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP
 - https://github.com/cyrusbehr/tensorrt-cpp-api
 - https://github.com/mattiasbax/yolo-pose_cpp
