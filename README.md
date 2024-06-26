@@ -106,6 +106,7 @@
 - https://github.com/vladimir-chernykh/coreml-performance
 
 #### CoreML - Stable Diffusion
+- https://github.com/apple/ml-4m/
 - https://github.com/apple/ml-stable-diffusion
 - https://huggingface.co/stabilityai/stable-diffusion-2-base [1]
 - https://github.com/Stability-AI/stablediffusion [1]
