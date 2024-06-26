@@ -1,5 +1,9 @@
 # AI - Edge Computing
 
+## OBJECT DETECTION WITH LLMs
+
+- https://blog.roboflow.com/fine-tune-florence-2-object-detection/
+
 ## Onnxruntime
 
 - https://leimao.github.io/blog/ONNX-Runtime-CPP-Inference/
