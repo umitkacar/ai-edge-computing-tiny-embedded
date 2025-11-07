@@ -1,658 +1,1449 @@
-# AI Edge Computing & TinyML - Comprehensive Guide
+<div align="center">
 
-> **Latest Update**: January 2025 - State-of-the-Art Algorithms & Trends for Edge AI and Embedded Systems
+# 🚀 AI Edge Computing & TinyML
+### *Comprehensive Guide to State-of-the-Art Edge AI*
 
-## 📊 Table of Contents
-- [🔥 SOTA Models & Algorithms (2024-2025)](#-sota-models--algorithms-2024-2025)
-- [Object Detection & Vision](#object-detection--vision)
-- [Inference Frameworks & Runtimes](#inference-frameworks--runtimes)
-- [Model Compression & Optimization](#model-compression--optimization)
-- [Hardware Acceleration](#hardware-acceleration)
-- [Research Papers & Resources](#research-papers--resources)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=1000&color=00D9FF&center=true&vCenter=true&width=940&lines=AI+Edge+Computing+%26+TinyML;Ultra-Low+Power+AI+Systems;Deploy+AI+on+Embedded+Devices;Real-Time+Inference+at+the+Edge" alt="Typing SVG" />
+
+[![GitHub stars](https://img.shields.io/github/stars/umitkacar/ai-edge-computing-tiny-embedded?style=for-the-badge&logo=github&color=yellow)](https://github.com/umitkacar/ai-edge-computing-tiny-embedded/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/umitkacar/ai-edge-computing-tiny-embedded?style=for-the-badge&logo=github&color=blue)](https://github.com/umitkacar/ai-edge-computing-tiny-embedded/network/members)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
+[![Latest Update](https://img.shields.io/badge/Updated-January_2025-ff69b4?style=for-the-badge&logo=clockify)](https://github.com/umitkacar/ai-edge-computing-tiny-embedded)
 
 ---
 
-## 🔥 SOTA Models & Algorithms (2024-2025)
+### 🌟 **Latest Update: January 2025**
+> State-of-the-Art Algorithms & Trends for Edge AI and Embedded Systems
 
-### 🎯 Object Detection Models
+</div>
 
-#### **YOLOv11 (YOLO11)** - November 2024
-State-of-the-art real-time object detection with transformer-based improvements.
+---
 
-**Key Features:**
-- Transformer-based backbone with C3k2 blocks
-- Partial Self-Attention (PSA) mechanism
-- NMS-free training with dual label assignment
-- 25-40% lower latency vs YOLOv10
-- 10-15% improvement in mAP
-- 60+ FPS processing capability
+## 📋 **Table of Contents**
 
-**Resources:**
-- [Ultralytics YOLO11 Docs](https://docs.ultralytics.com/models/)
-- [YOLO Evolution Paper](https://arxiv.org/html/2510.09653v2)
+<table>
+<tr>
+<td width="33%" valign="top">
 
-#### **YOLOv10** - May 2024
-Eliminates NMS for end-to-end real-time detection.
+### 🔥 **Core Topics**
+- [🎯 SOTA Models 2024-2025](#-sota-models--algorithms-2024-2025)
+- [👁️ Object Detection](#-object-detection-models)
+- [🤖 Small Language Models](#-small-language-models-slms-for-edge)
+- [⚡ State Space Models](#-state-space-models---efficient-transformers)
 
-**Performance:**
-- YOLOv10s: 1.8x faster than RT-DETR-R18
-- YOLOv10b: 46% less latency, 25% fewer parameters than YOLOv9-C
-- mAP: 38.5 - 54.4
+</td>
+<td width="33%" valign="top">
 
-**Resources:**
-- [YOLOv10 Paper](https://arxiv.org/pdf/2405.14458)
-- [Ultralytics YOLOv10](https://docs.ultralytics.com/models/yolov10/)
+### 🛠️ **Frameworks & Tools**
+- [🚀 Inference Frameworks](#-inference-frameworks--runtimes)
+- [🔧 Model Optimization](#-model-compression--optimization)
+- [💻 Hardware Platforms](#-hardware-acceleration--platforms)
+- [🌐 Deployment Tools](#-edge-deployment-frameworks)
 
-#### **RT-DETR & RT-DETRv2** - 2024
-First practical real-time detection transformer.
+</td>
+<td width="33%" valign="top">
 
-**Performance:**
-- 53.1% AP at 108 FPS (NVIDIA T4)
-- RT-DETRv2: >55% AP without speed loss
-- mAP: 46.5 - 54.8
+### 📚 **Resources**
+- [🎯 TinyML & MCU](#-tinyml--mcu-specific-advances)
+- [⚙️ Compilers](#%EF%B8%8F-compilers--low-level-frameworks)
+- [📄 Research Papers](#-research-papers--academic-resources)
+- [🎓 Contributing](#-contributing--community)
 
-**Resources:**
-- [RT-DETR vs YOLO11 Comparison](https://docs.ultralytics.com/compare/rtdetr-vs-yolo11/)
+</td>
+</tr>
+</table>
 
-### 📱 Efficient Vision Models for Edge
+---
 
-#### **MobileNetV4** - ECCV 2024
-Universal efficient architecture for mobile ecosystem.
+<div align="center">
 
-**Innovations:**
-- Universal Inverted Bottleneck (UIB) block
-- Mobile MQA attention (39% speedup)
-- Optimized NAS recipe
-- 87% ImageNet accuracy @ 3.8ms (Pixel 8 EdgeTPU)
+## 🔥 **SOTA Models & Algorithms (2024-2025)**
 
-**Resources:**
-- [MobileNetV4 Paper (Springer)](https://link.springer.com/chapter/10.1007/978-3-031-73661-2_5)
-- [Google Research](https://syncedreview.com/2024/04/18/87-imagenet-accuracy-3-8ms-latency-googles-mobilenetv4-redefines-on-device-mobile-vision/)
+![AI Edge](https://img.shields.io/badge/AI-Edge_Computing-00D9FF?style=for-the-badge&logo=tensorflow&logoColor=white)
+![TinyML](https://img.shields.io/badge/TinyML-Embedded_AI-FF6B6B?style=for-the-badge&logo=arduino&logoColor=white)
+![SOTA](https://img.shields.io/badge/SOTA-2024--2025-4ECDC4?style=for-the-badge&logo=artifacthub&logoColor=white)
 
-#### **EfficientViT** - 2024
-Lightweight multi-scale attention for high-resolution tasks.
+</div>
 
-**Features:**
-- Memory-efficient Vision Transformer
-- Cascaded group attention
-- Suitable for dense prediction tasks
+---
 
-### 🤖 Small Language Models (SLMs) for Edge
+### 🎯 **Object Detection Models**
 
-#### **Microsoft Phi-3** - 2024
-High-capability small language model family.
+<table>
+<tr>
+<td width="50%">
 
-**Variants:**
-- Phi-3-mini: 3.8B parameters
-- Context: Up to 128K tokens
-- Optimized for GPU, CPU, mobile deployment
+#### 🥇 **YOLOv11 (YOLO11)**
+![Release](https://img.shields.io/badge/Release-November_2024-brightgreen?style=flat-square&logo=github)
+![Status](https://img.shields.io/badge/Status-SOTA-gold?style=flat-square&logo=hackthebox)
 
-**Resources:**
+> 🚀 State-of-the-art real-time object detection with transformer-based improvements
+
+**✨ Key Features:**
+- ⚡ Transformer-based backbone with C3k2 blocks
+- 🎯 Partial Self-Attention (PSA) mechanism
+- 🔥 NMS-free training with dual label assignment
+- 📉 **25-40% lower latency** vs YOLOv10
+- 📊 **10-15% improvement** in mAP
+- ⚡ **60+ FPS** processing capability
+
+**📚 Resources:**
+```bash
+📖 Ultralytics Docs → https://docs.ultralytics.com/models/
+📄 YOLO Evolution → https://arxiv.org/html/2510.09653v2
+```
+
+</td>
+<td width="50%">
+
+#### 🥈 **YOLOv10**
+![Release](https://img.shields.io/badge/Release-May_2024-blue?style=flat-square&logo=github)
+![NMS](https://img.shields.io/badge/NMS-Free-orange?style=flat-square&logo=lightning)
+
+> ⚡ Eliminates NMS for end-to-end real-time detection
+
+**📊 Performance Metrics:**
+- 🔸 **YOLOv10s**: 1.8x faster than RT-DETR-R18
+- 🔸 **YOLOv10b**: 46% less latency, 25% fewer parameters
+- 🔸 **mAP Range**: 38.5 - 54.4
+
+**📚 Resources:**
+```bash
+📄 Paper → https://arxiv.org/pdf/2405.14458
+📖 Docs → https://docs.ultralytics.com/models/yolov10/
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+#### 🤖 **RT-DETR & RT-DETRv2**
+![Transformer](https://img.shields.io/badge/Architecture-Transformer-blueviolet?style=for-the-badge&logo=pytorch)
+![Real-Time](https://img.shields.io/badge/Real--Time-Detection-success?style=for-the-badge&logo=speedtest)
+
+> 🎯 First practical real-time detection transformer
+
+| Model | AP Score | FPS | Device |
+|-------|----------|-----|--------|
+| RT-DETR | **53.1%** | 108 | NVIDIA T4 |
+| RT-DETRv2 | **>55%** | 108+ | NVIDIA T4 |
+
+**🔗 Resources:**
+- 📊 [RT-DETR vs YOLO11 Comparison](https://docs.ultralytics.com/compare/rtdetr-vs-yolo11/)
+
+---
+
+### 📱 **Efficient Vision Models for Edge**
+
+<div align="center">
+
+```mermaid
+graph LR
+    A[🖼️ Input Image] --> B[📱 MobileNetV4]
+    A --> C[⚡ EfficientViT]
+    B --> D[🎯 87% Accuracy]
+    C --> E[🔥 3.8ms Latency]
+    D --> F[📲 Edge TPU]
+    E --> F
+    style A fill:#e1f5ff
+    style B fill:#ffe1f5
+    style C fill:#f5ffe1
+    style D fill:#ffe1e1
+    style E fill:#e1ffe1
+    style F fill:#ffd700
+```
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 📱 **MobileNetV4**
+![ECCV](https://img.shields.io/badge/ECCV-2024-red?style=flat-square&logo=adobeacrobatreader)
+![Mobile](https://img.shields.io/badge/Platform-Mobile-blue?style=flat-square&logo=android)
+
+> 🌐 Universal efficient architecture for mobile ecosystem
+
+**🎨 Innovations:**
+- 🔹 Universal Inverted Bottleneck (UIB) block
+- ⚡ Mobile MQA attention (**39% speedup**)
+- 🎯 Optimized NAS recipe
+- 🏆 **87% ImageNet accuracy** @ 3.8ms (Pixel 8 EdgeTPU)
+
+**📚 Resources:**
+- 📄 [MobileNetV4 Paper (Springer)](https://link.springer.com/chapter/10.1007/978-3-031-73661-2_5)
+- 🔬 [Google Research](https://syncedreview.com/2024/04/18/87-imagenet-accuracy-3-8ms-latency-googles-mobilenetv4-redefines-on-device-mobile-vision/)
+
+</td>
+<td width="50%" valign="top">
+
+#### ⚡ **EfficientViT**
+![ViT](https://img.shields.io/badge/Type-Vision_Transformer-purple?style=flat-square&logo=lightning)
+![2024](https://img.shields.io/badge/Year-2024-green?style=flat-square)
+
+> 🧠 Lightweight multi-scale attention for high-resolution tasks
+
+**✨ Features:**
+- 🔸 Memory-efficient Vision Transformer
+- 🔸 Cascaded group attention
+- 🔸 Dense prediction tasks optimized
+- 🔸 High-resolution image processing
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+## 🤖 **Small Language Models (SLMs) for Edge**
+
+![LLM](https://img.shields.io/badge/Small_Language-Models-FF6B6B?style=for-the-badge&logo=openai&logoColor=white)
+![Edge](https://img.shields.io/badge/Edge-Deployment-4ECDC4?style=for-the-badge&logo=raspberrypi&logoColor=white)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧠 **Microsoft Phi-3**
+![Microsoft](https://img.shields.io/badge/Microsoft-Phi--3-0078D4?style=for-the-badge&logo=microsoft)
+
+**📊 Variants:**
+```yaml
+Model: Phi-3-mini
+Parameters: 3.8B
+Context: Up to 128K tokens
+Deployment: GPU, CPU, Mobile
+Status: ✅ Production Ready
+```
+
+**🎯 Optimized For:**
+- 💻 GPU acceleration
+- 🖥️ CPU inference
+- 📱 Mobile deployment
+
+**🔗 Resources:**
 - [Phi-3 Overview](https://datasciencedojo.com/blog/small-language-models-phi-3/)
 
-#### **TinyLlama** - 2024
-Compact yet powerful language model.
+</td>
+<td width="50%">
 
-**Specs:**
-- 1.1B parameters
-- Ideal for mobile/edge devices
-- Strong performance for size
+### 🦙 **TinyLlama**
+![TinyLlama](https://img.shields.io/badge/TinyLlama-1.1B-orange?style=for-the-badge&logo=meta)
 
-#### **Google Gemini Nano** - 2024
-On-device AI for smartphones.
+**📊 Specifications:**
+```yaml
+Parameters: 1.1B
+Target: Mobile/Edge devices
+Performance: High for size class
+Year: 2024
+Status: ✅ Active
+```
+
+**✨ Highlights:**
+- 🔸 Compact architecture
+- 🔸 Edge-optimized
+- 🔸 Strong performance/size ratio
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🌟 **Google Gemini Nano**
+![Google](https://img.shields.io/badge/Google-Gemini_Nano-4285F4?style=for-the-badge&logo=google)
+
+**📱 On-device AI for Smartphones**
 
 **Variants:**
-- 1.8B / 3.25B parameters
-- Edge-optimized for phones/IoT
-- Context-aware reasoning, translation, summarization
+- 📊 **1.8B** parameters (lightweight)
+- 📊 **3.25B** parameters (standard)
 
-#### **Meta Llama 3.2** - 2024
-Edge AI and vision capabilities.
+**🎯 Capabilities:**
+- ✅ Context-aware reasoning
+- ✅ Real-time translation
+- ✅ Text summarization
+- ✅ Edge-optimized for phones/IoT
+
+</td>
+<td width="50%">
+
+### 🦙 **Meta Llama 3.2**
+![Meta](https://img.shields.io/badge/Meta-Llama_3.2-0668E1?style=for-the-badge&logo=meta)
+
+**🖼️ Edge AI & Vision Capabilities**
 
 **Features:**
-- Optimized for edge deployment
-- Vision-language capabilities
-- Mobile-friendly variants
+- ⚡ Edge deployment optimized
+- 👁️ Vision-language capabilities
+- 📱 Mobile-friendly variants
+- 🔥 Latest architecture
 
-**Resources:**
+**🔗 Resources:**
 - [Llama 3.2 Announcement](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/)
 
-#### **MobileVLM** - 2024
-Efficient vision-language model.
-
-**Specs:**
-- mobileLLaMA: 2.7B parameters
-- Trained from scratch on open datasets
-- Optimized for mobile devices
-
-### ⚡ State Space Models - Efficient Transformers
-
-#### **Mamba** - 2024
-Linear-time sequence modeling with selective state spaces.
-
-**Performance:**
-- 5x higher throughput than Transformers
-- Linear scaling in sequence length
-- Mamba-3B outperforms Transformers of same size
-- Matches Transformers 2x its size
-
-**Resources:**
-- [Mamba Paper](https://arxiv.org/abs/2312.00752)
-- [Mamba GitHub](https://github.com/state-spaces/mamba)
-- [Mamba Survey](https://arxiv.org/html/2408.01129v1)
-
-#### **eMamba** - 2024
-Edge-optimized Mamba acceleration framework.
-
-**Features:**
-- End-to-end hardware acceleration
-- Designed for edge platforms
-- Leverages linear time complexity
-
-**Resources:**
-- [eMamba Paper](https://arxiv.org/html/2508.10370)
+</td>
+</tr>
+</table>
 
 ---
 
-## 🚀 Inference Frameworks & Runtimes
+### 📷 **MobileVLM**
+![VLM](https://img.shields.io/badge/Vision--Language-Model-success?style=for-the-badge&logo=youtube)
 
-### **TensorRT-LLM** - NVIDIA 2024
-High-performance LLM inference on NVIDIA GPUs.
+> 🎨 Efficient vision-language model for mobile devices
 
-**Features:**
-- State-of-the-art optimizations for LLMs
-- Python and C++ API
-- Significant speedup (70% faster than llama.cpp on RTX 4090)
-- Maintains quality across all precisions
+**Specifications:**
+- 🔹 **mobileLLaMA**: 2.7B parameters
+- 🔹 Trained from scratch on open datasets
+- 🔹 Fully optimized for mobile deployment
+- 🔹 Vision + Language capabilities
 
-**Resources:**
+---
+
+<div align="center">
+
+## ⚡ **State Space Models - Efficient Transformers**
+
+![SSM](https://img.shields.io/badge/State_Space-Models-blueviolet?style=for-the-badge&logo=lightning&logoColor=white)
+![Efficiency](https://img.shields.io/badge/5x-Faster_Than_Transformers-gold?style=for-the-badge&logo=speedtest)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 🐍 **Mamba**
+![Mamba](https://img.shields.io/badge/Mamba-SSM-green?style=for-the-badge&logo=python)
+
+> ⚡ Linear-time sequence modeling with selective state spaces
+
+**🚀 Performance Highlights:**
+
+| Metric | Performance |
+|--------|-------------|
+| Throughput | **5x higher** than Transformers |
+| Scaling | **Linear** in sequence length |
+| Comparison | Mamba-3B > Transformers (same size) |
+| Power | Matches Transformers 2x its size |
+
+**📊 Advantages:**
+```diff
++ ✅ Linear time complexity
++ ✅ 5x throughput improvement
++ ✅ Efficient long sequences
++ ✅ Lower memory footprint
+- ❌ Newer architecture (less tested)
+```
+
+**📚 Resources:**
+- 📄 [Mamba Paper](https://arxiv.org/abs/2312.00752)
+- 💻 [Mamba GitHub](https://github.com/state-spaces/mamba)
+- 📖 [Mamba Survey](https://arxiv.org/html/2408.01129v1)
+
+</td>
+<td width="50%">
+
+### 📱 **eMamba**
+![eMamba](https://img.shields.io/badge/eMamba-Edge_Optimized-orange?style=for-the-badge&logo=raspberry-pi)
+
+> 🔧 Edge-optimized Mamba acceleration framework
+
+**✨ Features:**
+```yaml
+Design: End-to-end hardware acceleration
+Target: Edge platforms
+Complexity: Linear time
+Status: 2024 Release
+```
+
+**🎯 Optimizations:**
+- 🔹 Hardware-aware design
+- 🔹 Edge platform specific
+- 🔹 Leverages linear complexity
+- 🔹 Memory efficient
+
+**📚 Resources:**
+- 📄 [eMamba Paper](https://arxiv.org/html/2508.10370)
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+## 🚀 **Inference Frameworks & Runtimes**
+
+![Inference](https://img.shields.io/badge/High_Performance-Inference-FF6B6B?style=for-the-badge&logo=nvidia&logoColor=white)
+![Runtime](https://img.shields.io/badge/Runtime-Optimization-00D9FF?style=for-the-badge&logo=apache&logoColor=white)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### ⚡ **TensorRT-LLM**
+![NVIDIA](https://img.shields.io/badge/NVIDIA-TensorRT--LLM-76B900?style=for-the-badge&logo=nvidia)
+
+> 🏆 High-performance LLM inference on NVIDIA GPUs
+
+**📊 Performance:**
+```diff
++ 70% faster than llama.cpp on RTX 4090
++ State-of-the-art optimizations
++ Quality maintained across precisions
+```
+
+**✨ Features:**
+- 🔸 Python & C++ API
+- 🔸 Multi-precision support
+- 🔸 Advanced kernel optimization
+- 🔸 Production-grade quality
+
+**🔗 Resources:**
 - [TensorRT-LLM GitHub](https://github.com/NVIDIA/TensorRT-LLM)
 - [Deployment Guide](https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4/)
 
-### **vLLM** - UC Berkeley 2024
-High-throughput LLM serving with PagedAttention.
+</td>
+<td width="50%">
 
-**Features:**
-- PagedAttention memory management
-- Optimized key-value cache handling
-- Supports AMD GPU, Google TPU, AWS Inferentia
-- Built on PyTorch
+### 📄 **vLLM**
+![vLLM](https://img.shields.io/badge/UC_Berkeley-vLLM-003262?style=for-the-badge&logo=databricks)
 
-**Resources:**
+> 💡 High-throughput LLM serving with PagedAttention
+
+**🎯 Innovations:**
+- ⚡ PagedAttention memory management
+- 🔸 Optimized KV cache handling
+- 🌐 Multi-platform support
+
+**🖥️ Supported Hardware:**
+```yaml
+AMD: GPU support
+Google: TPU support
+AWS: Inferentia support
+Base: PyTorch
+```
+
+**🔗 Resources:**
 - [vLLM vs TensorRT-LLM](https://northflank.com/blog/vllm-vs-tensorrt-llm-and-how-to-run-them)
 
-### **ExecuTorch** - Meta 2024
-Efficient LLM execution on edge devices.
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🦙 **ExecuTorch**
+![Meta](https://img.shields.io/badge/Meta-ExecuTorch-0668E1?style=for-the-badge&logo=meta)
+
+> 📱 Efficient LLM execution on edge devices
 
 **Features:**
-- Lightweight runtime for edge hardware
-- Static memory planning
-- Supports CPU, GPU, AI accelerators
-- TorchAO quantization integration
+- 🔹 Lightweight edge runtime
+- 🔹 Static memory planning
+- 🔹 Multi-platform support
+- 🔹 TorchAO quantization
 
-**Resources:**
+**💻 Hardware Support:**
+- ✅ CPU
+- ✅ GPU
+- ✅ AI Accelerators
+- ✅ Mobile devices
+
+**🔗 Resources:**
 - [PyTorch Conference 2024](https://www.infoq.com/news/2024/09/pytorch-conference-2024/)
 
-### **llama.cpp** - 2024
-CPU-optimized LLM inference.
+</td>
+<td width="50%">
 
-**Features:**
-- Lower memory usage
-- No GPU required
-- Fast generation quality
-- Cross-platform support
+### 💻 **llama.cpp**
+![llama.cpp](https://img.shields.io/badge/llama.cpp-CPU_Optimized-green?style=for-the-badge&logo=cplusplus)
 
-**Comparison:**
+> ⚡ CPU-optimized LLM inference
+
+**Advantages:**
+```diff
++ ✅ Lower memory usage
++ ✅ No GPU required
++ ✅ Fast generation
++ ✅ Cross-platform
++ ✅ Wide model support
+```
+
+**🔗 Comparison:**
 - [vLLM vs Ollama vs llama.cpp vs TGI vs TensorRT-LLM](https://itecsonline.com/post/vllm-vs-ollama-vs-llama.cpp-vs-tgi-vs-tensort)
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🔧 Model Compression & Optimization
+<div align="center">
 
-### 📉 Advanced Quantization Techniques
+## 🔧 **Model Compression & Optimization**
 
-#### **AWQ (Activation-aware Weight Quantization)** - MIT 2024
-**🏆 MLSys 2024 Best Paper Award**
+![Compression](https://img.shields.io/badge/Model-Compression-FF6B6B?style=for-the-badge&logo=semanticscholar&logoColor=white)
+![Quantization](https://img.shields.io/badge/Quantization-4bit__8bit-4ECDC4?style=for-the-badge&logo=hackthebox&logoColor=white)
 
-**Innovation:**
-- Protects salient weights based on activations
-- Not all weights are equally important
-- Skips critical weights during quantization
+</div>
 
-**Resources:**
+---
+
+### 📉 **Advanced Quantization Techniques**
+
+<table>
+<tr>
+<td width="33%">
+
+#### 🏆 **AWQ**
+![Award](https://img.shields.io/badge/MLSys_2024-Best_Paper-gold?style=flat-square&logo=adobeacrobatreader)
+
+**Activation-aware Weight Quantization**
+
+> 🎯 MIT HAN Lab Innovation
+
+**Key Concept:**
+```python
+# Not all weights are equal!
+if is_salient(weight):
+    skip_quantization()
+else:
+    quantize_weight()
+```
+
+**Features:**
+- ⚡ Protects critical weights
+- 🎯 Activation-aware
+- 🔥 State-of-the-art results
+
+**🔗 Resources:**
 - [AWQ GitHub](https://github.com/mit-han-lab/llm-awq)
 - [MIT HAN Lab](https://hanlab.mit.edu/)
 
-#### **GPTQ** - 2024
-Early successful 4-bit quantization for large models.
+</td>
+<td width="33%">
+
+#### 💎 **GPTQ**
+![GPTQ](https://img.shields.io/badge/GPTQ-4bit-blue?style=flat-square&logo=lightning)
+
+**GPU-Focused Quantization**
 
 **Features:**
-- Row-wise weight matrix quantization
-- Hessian matrix optimization
-- GPU-focused inference
-- Quantized 175B models (BLOOM, OPT-175B)
+- 🔸 Row-wise quantization
+- 🔸 Hessian optimization
+- 🔸 GPU inference focused
+- 🔸 175B models supported
 
-#### **QLoRA** - 2024
-Efficient fine-tuning with quantization.
+**Achievements:**
+```yaml
+Models: BLOOM, OPT-175B
+Precision: 4-bit
+Platform: GPU optimized
+```
 
-**Features:**
-- 4-bit NormalFloat (NF4) data type
-- Double quantization
-- Low-Rank Adaptation matrices
-- Fine-tune 65B models on single GPU
+</td>
+<td width="33%">
 
-#### **Unsloth Dynamic 4-bit** - December 2024
-Latest quantization innovation.
+#### 🔬 **QLoRA**
+![QLoRA](https://img.shields.io/badge/QLoRA-Fine--Tuning-purple?style=flat-square&logo=pytorch)
+
+**Efficient Fine-tuning**
+
+**Innovations:**
+- ✨ 4-bit NormalFloat (NF4)
+- ✨ Double quantization
+- ✨ LoRA adapters
+- ✨ Single GPU fine-tuning
+
+**Capability:**
+```diff
++ Fine-tune 65B model
++ On single GPU
++ Maintain quality
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+#### 🆕 **Unsloth Dynamic 4-bit**
+![Latest](https://img.shields.io/badge/Release-December_2024-brightgreen?style=for-the-badge&logo=github)
+
+> 🔥 Latest quantization innovation
 
 **Features:**
 - Built on BitsandBytes
 - Dynamic parameter quantization
-- Determines quantization per-parameter
+- Per-parameter optimization
 
-**Resources:**
-- [Quantization Comparison Guide](https://generativeai.pub/practical-guide-of-llm-quantization-gptq-awq-bitsandbytes-and-unsloth-bdeaa2c0bbf6)
-- [GPTQ vs GGUF vs AWQ](https://newsletter.maartengrootendorst.com/p/which-quantization-method-is-right)
+**📚 Comprehensive Guides:**
+- 📖 [Quantization Comparison](https://generativeai.pub/practical-guide-of-llm-quantization-gptq-awq-bitsandbytes-and-unsloth-bdeaa2c0bbf6)
+- 📊 [GPTQ vs GGUF vs AWQ](https://newsletter.maartengrootendorst.com/p/which-quantization-method-is-right)
 
-### 🔬 Neural Architecture Search (NAS)
+---
 
-**Overview:**
-NAS automates neural network architecture design, reducing manual intervention.
+### 🔬 **Neural Architecture Search (NAS)**
 
-**Key Approaches:**
+<div align="center">
 
-#### **Once-for-All (OFA)** - 2024
-Train once, deploy everywhere.
+![NAS](https://img.shields.io/badge/Neural_Architecture-Search-blueviolet?style=for-the-badge&logo=pytorch)
+
+</div>
+
+> 🤖 Automate neural network architecture design
+
+#### 🎯 **Once-for-All (OFA)**
+
+**Concept:** Train once, deploy everywhere
+
+```mermaid
+graph TD
+    A[🌐 Supernet Training] --> B[📦 Weight Sharing]
+    B --> C[📱 Mobile]
+    B --> D[💻 Desktop]
+    B --> E[⚡ Edge]
+    style A fill:#e1f5ff
+    style B fill:#ffe1f5
+    style C fill:#f5ffe1
+    style D fill:#ffe1e1
+    style E fill:#ffd700
+```
 
 **Features:**
-- Weight-sharing supernetwork
-- Represents any architecture in search space
-- Significantly reduces computational costs
-- Applied to ImageNet with ProxylessNAS and MobileNetV3
+- 🔹 Weight-sharing supernetwork
+- 🔹 Represents any architecture in search space
+- 🔹 Massive computational savings
+- 🔹 Applied to ImageNet with ProxylessNAS & MobileNetV3
 
-**Resources:**
+**🔗 Resources:**
 - [NAS Overview](https://www.automl.org/nas-overview/)
 - [MIT HAN Lab NAS](https://hanlab.mit.edu/techniques/nas)
 
-### 🎓 Knowledge Distillation & Pruning
+---
 
-#### **TinyBERT** - 2024-2025
-Two-stage distillation approach.
+### 🎓 **Knowledge Distillation & Pruning**
 
-**Performance:**
-- 96.8% of BERT-base performance
-- 7.5x smaller (4 self-attention layers)
-- Lowest energy variability (SD = 0.1032 kWh)
-- Task-agnostic + task-specific distillation
+<table>
+<tr>
+<td width="50%">
 
-#### **DistilBERT** - 2024
-Single-phase task-agnostic distillation.
+#### 🔬 **TinyBERT**
+![TinyBERT](https://img.shields.io/badge/TinyBERT-7.5x_Smaller-success?style=for-the-badge&logo=semanticscholar)
 
-**Performance:**
-- 97% of BERT performance
-- 40% smaller
-- 60% faster
-- General-purpose applications
+> 📚 Two-stage distillation approach
+
+**Performance Metrics:**
+```yaml
+Accuracy: 96.8% of BERT-base
+Size: 7.5x smaller (4 layers)
+Energy: Lowest variability (0.1032 kWh SD)
+Stages: Task-agnostic + Task-specific
+```
+
+**Advantages:**
+- ✅ Dual-stage distillation
+- ✅ Ultra-low energy variability
+- ✅ Compact architecture
+- ✅ High performance retention
+
+</td>
+<td width="50%">
+
+#### 📖 **DistilBERT**
+![DistilBERT](https://img.shields.io/badge/DistilBERT-40%25_Smaller-blue?style=for-the-badge&logo=huggingface)
+
+> ⚡ Single-phase task-agnostic distillation
+
+**Performance Metrics:**
+```yaml
+Accuracy: 97% of BERT
+Size Reduction: 40% smaller
+Speed: 60% faster
+Use Case: General-purpose
+```
 
 **Recent Research (2025):**
-- 32% energy reduction with pruning on BERT
-- Iterative methods combining distillation + adaptive pruning
+- 🔸 32% energy reduction with pruning
+- 🔸 Iterative distillation + adaptive pruning
+- 🔸 Nature Scientific Reports
 
-**Resources:**
+</td>
+</tr>
+</table>
+
+**📚 Resources:**
 - [Nature Scientific Reports 2025](https://www.nature.com/articles/s41598-025-07821-w)
 - [DistilBERT Medium](https://medium.com/huggingface/distilbert-8cf3380435b5)
 
 ---
 
-## 🎯 TinyML & MCU-specific Advances
+<div align="center">
 
-### **MCUNet Series** - MIT HAN Lab
+## 🎯 **TinyML & MCU-specific Advances**
 
-**MCUNetV1:**
-- Neural architecture for microcontrollers
-- Co-design of model and inference engine
+![TinyML](https://img.shields.io/badge/TinyML-Microcontrollers-FF6B6B?style=for-the-badge&logo=arduino&logoColor=white)
+![MIT](https://img.shields.io/badge/MIT-HAN_Lab-A31F34?style=for-the-badge&logo=mit&logoColor=white)
 
-**MCUNetV2:**
-- Record 71.8% ImageNet accuracy on MCU
-- >90% accuracy on visual wake words (32kB SRAM)
-- Enables object detection on tiny devices
+</div>
 
-**MCUNetV3:**
-- Latest iteration with enhanced efficiency
+---
 
-**TinyTL:**
+### 🧠 **MCUNet Series** - MIT HAN Lab
+
+<table>
+<tr>
+<td width="33%">
+
+#### 📱 **MCUNetV1**
+![V1](https://img.shields.io/badge/Version-1.0-blue?style=flat-square)
+
+**Foundation:**
+- 🔸 Neural architecture for MCUs
+- 🔸 Co-designed model + inference engine
+- 🔸 Ultra-low memory footprint
+
+</td>
+<td width="33%">
+
+#### 🚀 **MCUNetV2**
+![V2](https://img.shields.io/badge/Version-2.0-green?style=flat-square)
+
+**Achievements:**
+```yaml
+ImageNet: 71.8% accuracy
+Visual Wake: >90% (32kB SRAM)
+Capability: Object detection
+Platform: Tiny devices
+```
+
+</td>
+<td width="33%">
+
+#### ⚡ **MCUNetV3**
+![V3](https://img.shields.io/badge/Version-3.0-orange?style=flat-square)
+
+**Latest:**
+- 🔸 Enhanced efficiency
+- 🔸 State-of-the-art MCU AI
+- 🔸 Production ready
+
+</td>
+</tr>
+</table>
+
+---
+
+#### 🎓 **Additional MCU Tools**
+
+<table>
+<tr>
+<td width="50%">
+
+**🔧 TinyTL**
 - Tiny transfer learning for MCUs
 - On-device learning capabilities
+- Minimal resource overhead
 
-**PockEngine:**
+</td>
+<td width="50%">
+
+**⚙️ PockEngine**
 - Inference engine optimization
+- MCU-specific acceleration
+- Memory-efficient execution
 
-**Resources:**
-- [MCUNet Official](https://mcunet.mit.edu/)
-- [MCUNet GitHub](https://github.com/mit-han-lab/mcunet)
-- [TinyML Projects](https://hanlab.mit.edu/projects/tinyml)
+</td>
+</tr>
+</table>
 
-### **TinyDL (Tiny Deep Learning)** - 2024
-Evolution from TinyML to deep learning on edge.
+**📚 Resources:**
+- 🌐 [MCUNet Official](https://mcunet.mit.edu/)
+- 💻 [MCUNet GitHub](https://github.com/mit-han-lab/mcunet)
+- 📖 [TinyML Projects](https://hanlab.mit.edu/projects/tinyml)
 
-**Focus:**
-- Deploying deep learning on ultra-constrained hardware
-- Power consumption in mW range
-- Sensor data analytics on-device
+---
 
-**Resources:**
+### 🔬 **TinyDL (Tiny Deep Learning)**
+
+![TinyDL](https://img.shields.io/badge/TinyDL-2024-blueviolet?style=for-the-badge&logo=tensorflow)
+
+> 🎯 Evolution from TinyML to deep learning on edge
+
+**Focus Areas:**
+- 🔹 Deep learning on ultra-constrained hardware
+- 🔹 Power consumption in **mW range**
+- 🔹 On-device sensor analytics
+- 🔹 Real-time inference
+
+**📄 Resources:**
 - [TinyDL Survey](https://arxiv.org/html/2506.18927v1)
 
 ---
 
-## 🔩 Hardware Acceleration & Platforms
+<div align="center">
 
-### **NVIDIA Jetson Orin Nano Super** - Late 2024
-Powerful edge AI development kit.
+## 🔩 **Hardware Acceleration & Platforms**
 
-**Specs:**
-- 67 INT8 TOPS compute
-- 1.7x higher generative AI inference vs previous Orin Nano
-- $249 price point
+![Hardware](https://img.shields.io/badge/Hardware-Acceleration-gold?style=for-the-badge&logo=nvidia&logoColor=black)
+![Edge](https://img.shields.io/badge/Edge-Devices-4ECDC4?style=for-the-badge&logo=raspberrypi&logoColor=white)
 
-### **Edge TPU & Neural Accelerators**
-- Google Pixel EdgeTPU
-- Apple Neural Engine
-- Specialized AI accelerators
-
-### 📱 Mobile Deployment Targets
-- ARM CPUs
-- Mobile DSPs
-- Mobile GPUs
-- NPUs (Neural Processing Units)
+</div>
 
 ---
 
----
+### 🖥️ **Edge AI Platforms**
 
-## 🛠️ Implementation Resources & Tools
+<table>
+<tr>
+<td width="50%">
 
-### ONNX Runtime
-Cross-platform inference with ONNX models.
+#### 🟢 **NVIDIA Jetson Orin Nano Super**
+![NVIDIA](https://img.shields.io/badge/NVIDIA-Jetson-76B900?style=for-the-badge&logo=nvidia)
 
-**Documentation & Tutorials:**
-- [ONNX Runtime C++ Inference](https://leimao.github.io/blog/ONNX-Runtime-CPP-Inference/)
-- [PyTorch to ONNX Tutorial](https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html)
-- [ONNX Registry Tutorial](https://pytorch.org/tutorials/beginner/onnx/onnx_registry_tutorial.html)
-- [On-Device Training](https://onnxruntime.ai/docs/api/python/on_device_training/training_artifacts.html)
-
-**Compatibility:**
-- [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html) (ONNX, OPSET, TensorRT, CUDA, CUDNN)
-- [ONNX Versioning](https://github.com/onnx/onnx/blob/main/docs/Versioning.md)
-- [CUDA Execution Provider](https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html)
-
-**Example Implementations:**
-- [C++ ResNet Console App](https://github.com/cassiebreviu/cpp-onnxruntime-resnet-console-app)
-- [ONNX Runtime C++ Example](https://github.com/k2-gc/onnxruntime-cpp-example)
-- [ONNX Runtime Android](https://github.com/Rohithkvsp/OnnxRuntimeAndorid)
-- [ByteTrack ONNX Inference](https://github.com/ifzhang/ByteTrack/blob/main/deploy/ONNXRuntime/onnx_inference.py)
-
-**Model Repositories:**
-- [HuggingFace ONNX Models](https://huggingface.co/models?sort=trending&search=onnx)
-- [txtai ONNX Pipeline](https://neuml.github.io/txtai/pipeline/train/hfonnx/)
-- [Ultralytics Export](https://docs.ultralytics.com/modes/export/#arguments)
-
-### ONNX Runtime Quantization
-- [Quantization Tools](https://github.com/microsoft/onnxruntime/tree/main/onnxruntime/python/tools/quantization)
-- [Float16 Optimization](https://onnxruntime.ai/docs/performance/model-optimizations/float16.html)
-- [Quantization Examples](https://github.com/microsoft/onnxruntime-inference-examples/tree/main/quantization)
-
-### YOLO Implementations
-
-**YOLO-NAS with ONNX:**
-- [YOLO-NAS ONNXRuntime](https://github.com/jason-li-831202/YOLO-NAS-onnxruntime)
-
-**YOLO + TensorRT (Detection, Pose, Segmentation):**
-- [YOLOv8-TensorRT-CPP](https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP)
-- [TensorRT C++ API](https://github.com/cyrusbehr/tensorrt-cpp-api)
-- [YOLOv8-TensorRT (Python + C++)](https://github.com/triple-Mu/YOLOv8-TensorRT)
-- [YOLO Pose C++](https://github.com/mattiasbax/yolo-pose_cpp)
-- [TensorRT Samples](https://github.com/NVIDIA/TensorRT/tree/main/samples/trtexec)
-- [YOLOv8 TensorRT Tutorial](https://www.youtube.com/watch?v=Z0n5aLmcRHQ)
-
-**YOLO + ONNXRuntime (All Tasks):**
-- [YOLOv8-ONNX-CPP (Python + C++)](https://github.com/FourierMourier/yolov8-onnx-cpp/tree/main)
-- [YOLOv8 Pose Implementation](https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp)
-- [YOLOv8 TensorRT Pose](https://github.com/triple-Mu/YOLOv8-TensorRT/blob/main/csrc/pose/normal/main.cpp)
-- [YOLO-ONNXRuntime-CPP](https://github.com/Amyheart/yolo-onnxruntime-cpp)
-- [YOLOv8-OpenCV-ONNXRuntime-CPP](https://github.com/UNeedCryDear/yolov8-opencv-onnxruntime-cpp)
-- [Ultralytics YOLOv8 C++ Examples](https://github.com/ultralytics/ultralytics/tree/main/examples/YOLOv8-ONNXRuntime-CPP)
-- [YOLOv6-OpenCV-ONNXRuntime](https://github.com/hpc203/yolov6-opencv-onnxruntime/tree/main)
-- [YOLOv5 Pose OpenCV](https://github.com/hpc203/yolov5_pose_opencv)
-
-**Community Resources:**
-- [hpc203 Repositories](https://github.com/hpc203?tab=repositories)
-- [YOLO Issue Discussions](https://github.com/ultralytics/ultralytics/issues/1852)
-- [YOLOv5 Fixed Bugs](https://github.com/ultralytics/yolov5/issues/916)
-- [Chinese Tutorial](https://zhuanlan.zhihu.com/p/466677699)
-- [ONNX Runtime Install Guide](https://velog.io/@dnchoi/ONNX-runtime-install)
-
-### TensorRT
-NVIDIA's high-performance deep learning inference optimizer.
-
-**Resources:**
-- [TensorRT Execution Provider](https://onnxruntime.ai/docs/execution-providers/TensorRT-ExecutionProvider.html#requirements)
-- [TensorRT Engine Cache](https://gitee.com/arnoldfychen/onnxruntime/blob/master/docs/execution_providers/TensorRT-ExecutionProvider.md#specify-tensorrt-engine-cache-path)
-
----
-
-## 🌐 Edge Deployment Frameworks
-
-### **FastDeploy** - PaddlePaddle
-Easy-to-use deployment toolbox for AI models.
-
-**Resources:**
-- [FastDeploy GitHub](https://github.com/PaddlePaddle/FastDeploy)
-- [Prebuilt Libraries](https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/en/build_and_install/download_prebuilt_libraries.md)
-
-### **DeepSparse & SparseML** - Neural Magic
-CPU-optimized inference with sparsity.
+**Specifications:**
+```yaml
+Compute: 67 INT8 TOPS
+Performance: 1.7x vs previous Orin
+Price: $249
+Release: Late 2024
+Status: ✅ Available
+```
 
 **Features:**
-- CPU inference acceleration
-- Sparsity-aware optimization
-- YOLOv5 benchmarks on CPUs
+- ⚡ Generative AI optimized
+- 🎯 Edge AI development kit
+- 💰 Affordable price point
 
-**Resources:**
-- [YOLOv5 CPU Benchmark](https://neuralmagic.com/blog/benchmark-yolov5-on-cpus-with-deepsparse/)
-- [SparseML GitHub](https://github.com/neuralmagic/sparseml/tree/main)
-- [DeepSparse GitHub](https://github.com/neuralmagic/deepsparse)
+</td>
+<td width="50%">
 
-### **NCNN** - Tencent
-High-performance neural network inference framework for mobile.
+#### 🔷 **Edge TPU & Neural Accelerators**
 
-**Resources:**
-- [NCNN GitHub](https://github.com/Tencent/ncnn)
-- [NCNN C++ Usage](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
-- [YoloMobile](https://github.com/wkt/YoloMobile)
-- [Awesome NCNN Collection](https://github.com/umitkacar/awesome-ncnn-collection)
-- [Model Converter](https://convertmodel.com/)
+**Hardware Platforms:**
 
-### **MACE** - Xiaomi
-Mobile AI Compute Engine.
+![Google](https://img.shields.io/badge/Google-Edge_TPU-4285F4?style=flat-square&logo=google)
+- Google Pixel EdgeTPU
+- Coral Dev Board
 
-**Resources:**
-- [MACE GitHub](https://github.com/xiaomi/mace)
+![Apple](https://img.shields.io/badge/Apple-Neural_Engine-000000?style=flat-square&logo=apple)
+- Apple Neural Engine
+- A-series chips
 
-### **CoreML** - Apple
-Machine learning framework for iOS/macOS.
+![Generic](https://img.shields.io/badge/Generic-AI_Accelerators-orange?style=flat-square&logo=sparkfun)
+- Specialized NPUs
+- Custom ASICs
 
-**Model Collections:**
-- [Semantic Segmentation CoreML](https://github.com/tucan9389/SemanticSegmentation-CoreML)
-- [CoreML Models Collection](https://github.com/john-rocky/CoreML-Models#u2net)
-- [Awesome CoreML Models](https://github.com/likedan/Awesome-CoreML-Models)
-- [Awesome CoreML Models 2](https://github.com/SwiftBrain/awesome-CoreML-models)
-- [RobustVideoMatting](https://github.com/PeterL1n/RobustVideoMatting)
-
-**Tools & Documentation:**
-- [PyTorch to CoreML Conversion](https://coremltools.readme.io/docs/pytorch-conversion)
-- [CoreML Helpers](https://github.com/hollance/CoreMLHelpers)
-- [Apple ML API](https://developer.apple.com/machine-learning/api/)
-- [CoreML Performance Tool](https://github.com/vladimir-chernykh/coreml-performance)
-
-**Stable Diffusion on CoreML:**
-- [Apple ML-4M](https://github.com/apple/ml-4m/)
-- [Apple ML Stable Diffusion](https://github.com/apple/ml-stable-diffusion)
-- [Stable Diffusion 2 Base](https://huggingface.co/stabilityai/stable-diffusion-2-base)
-- [Stability AI SD](https://github.com/Stability-AI/stablediffusion)
-- [Stable Diffusion v1.4](https://huggingface.co/CompVis/stable-diffusion-v1-4)
-- [RunwayML Stable Diffusion](https://github.com/runwayml/stable-diffusion)
-- [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+</td>
+</tr>
+</table>
 
 ---
 
-## ⚙️ Compilers & Low-Level Frameworks
+### 📱 **Mobile Deployment Targets**
 
-### **TVM** - Apache
-End-to-end deep learning compiler stack.
+<div align="center">
+
+| Platform | Architecture | Use Case |
+|----------|-------------|----------|
+| 🔧 **ARM CPUs** | ARM Cortex | General compute |
+| 📡 **Mobile DSPs** | Qualcomm/MediaTek | Signal processing |
+| 🎮 **Mobile GPUs** | Mali/Adreno | Graphics + AI |
+| 🧠 **NPUs** | Custom ASICs | Neural processing |
+
+</div>
+
+---
+
+<div align="center">
+
+## 🛠️ **Implementation Resources & Tools**
+
+![ONNX](https://img.shields.io/badge/ONNX-Runtime-blue?style=for-the-badge&logo=onnx&logoColor=white)
+![TensorRT](https://img.shields.io/badge/TensorRT-NVIDIA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+
+</div>
+
+---
+
+### 🔷 **ONNX Runtime**
+
+> Cross-platform inference with ONNX models
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 📚 **Documentation & Tutorials**
+- 📖 [ONNX Runtime C++ Inference](https://leimao.github.io/blog/ONNX-Runtime-CPP-Inference/)
+- 🐍 [PyTorch to ONNX Tutorial](https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html)
+- 📝 [ONNX Registry Tutorial](https://pytorch.org/tutorials/beginner/onnx/onnx_registry_tutorial.html)
+- 🎓 [On-Device Training](https://onnxruntime.ai/docs/api/python/on_device_training/training_artifacts.html)
+
+#### 🔧 **Compatibility**
+- ⚙️ [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html)
+- 📋 [ONNX Versioning](https://github.com/onnx/onnx/blob/main/docs/Versioning.md)
+- 🚀 [CUDA Execution Provider](https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html)
+
+</td>
+<td width="50%" valign="top">
+
+#### 💻 **Example Implementations**
+- 🖼️ [C++ ResNet Console App](https://github.com/cassiebreviu/cpp-onnxruntime-resnet-console-app)
+- ⚡ [ONNX Runtime C++ Example](https://github.com/k2-gc/onnxruntime-cpp-example)
+- 🤖 [ONNX Runtime Android](https://github.com/Rohithkvsp/OnnxRuntimeAndorid)
+- 🎯 [ByteTrack ONNX Inference](https://github.com/ifzhang/ByteTrack/blob/main/deploy/ONNXRuntime/onnx_inference.py)
+
+#### 📦 **Model Repositories**
+- 🤗 [HuggingFace ONNX Models](https://huggingface.co/models?sort=trending&search=onnx)
+- 🔧 [txtai ONNX Pipeline](https://neuml.github.io/txtai/pipeline/train/hfonnx/)
+- 📤 [Ultralytics Export](https://docs.ultralytics.com/modes/export/#arguments)
+
+</td>
+</tr>
+</table>
+
+---
+
+### 📉 **ONNX Runtime Quantization**
+
+![Quantization](https://img.shields.io/badge/Quantization-INT8_FP16-success?style=for-the-badge&logo=semanticscholar)
+
+**Tools & Resources:**
+- 🔧 [Quantization Tools](https://github.com/microsoft/onnxruntime/tree/main/onnxruntime/python/tools/quantization)
+- 📊 [Float16 Optimization](https://onnxruntime.ai/docs/performance/model-optimizations/float16.html)
+- 💡 [Quantization Examples](https://github.com/microsoft/onnxruntime-inference-examples/tree/main/quantization)
+
+---
+
+### 🎯 **YOLO Implementations**
+
+<details>
+<summary><b>🔥 Click to expand YOLO implementations</b></summary>
+
+<br>
+
+#### 🟣 **YOLO-NAS with ONNX**
+- 💻 [YOLO-NAS ONNXRuntime](https://github.com/jason-li-831202/YOLO-NAS-onnxruntime)
+
+#### 🟢 **YOLO + TensorRT** (Detection, Pose, Segmentation)
+- ⚡ [YOLOv8-TensorRT-CPP](https://github.com/cyrusbehr/YOLOv8-TensorRT-CPP)
+- 🔧 [TensorRT C++ API](https://github.com/cyrusbehr/tensorrt-cpp-api)
+- 🐍 [YOLOv8-TensorRT (Python + C++)](https://github.com/triple-Mu/YOLOv8-TensorRT)
+- 🤸 [YOLO Pose C++](https://github.com/mattiasbax/yolo-pose_cpp)
+- 📚 [TensorRT Samples](https://github.com/NVIDIA/TensorRT/tree/main/samples/trtexec)
+- 📺 [YOLOv8 TensorRT Tutorial](https://www.youtube.com/watch?v=Z0n5aLmcRHQ)
+
+#### 🔵 **YOLO + ONNXRuntime** (All Tasks)
+- 💻 [YOLOv8-ONNX-CPP](https://github.com/FourierMourier/yolov8-onnx-cpp/tree/main)
+- 🤸 [YOLOv8 Pose Implementation](https://github.com/mallumoSK/yolov8/blob/master/yolo/YoloPose.cpp)
+- ⚡ [YOLOv8 TensorRT Pose](https://github.com/triple-Mu/YOLOv8-TensorRT/blob/main/csrc/pose/normal/main.cpp)
+- 🔧 [YOLO-ONNXRuntime-CPP](https://github.com/Amyheart/yolo-onnxruntime-cpp)
+- 📷 [YOLOv8-OpenCV-ONNXRuntime-CPP](https://github.com/UNeedCryDear/yolov8-opencv-onnxruntime-cpp)
+- 📖 [Ultralytics YOLOv8 C++](https://github.com/ultralytics/ultralytics/tree/main/examples/YOLOv8-ONNXRuntime-CPP)
+- 🎯 [YOLOv6-OpenCV-ONNXRuntime](https://github.com/hpc203/yolov6-opencv-onnxruntime/tree/main)
+- 🏃 [YOLOv5 Pose OpenCV](https://github.com/hpc203/yolov5_pose_opencv)
+
+#### 🌐 **Community Resources**
+- 👨‍💻 [hpc203 Repositories](https://github.com/hpc203?tab=repositories)
+- 💬 [YOLO Issue Discussions](https://github.com/ultralytics/ultralytics/issues/1852)
+- 🐛 [YOLOv5 Fixed Bugs](https://github.com/ultralytics/yolov5/issues/916)
+- 🇨🇳 [Chinese Tutorial](https://zhuanlan.zhihu.com/p/466677699)
+- 📦 [ONNX Runtime Install Guide](https://velog.io/@dnchoi/ONNX-runtime-install)
+
+</details>
+
+---
+
+### ⚡ **TensorRT**
+
+![TensorRT](https://img.shields.io/badge/TensorRT-Inference_Optimizer-76B900?style=for-the-badge&logo=nvidia)
+
+> 🚀 NVIDIA's high-performance deep learning inference optimizer
+
+**Resources:**
+- 🔧 [TensorRT Execution Provider](https://onnxruntime.ai/docs/execution-providers/TensorRT-ExecutionProvider.html#requirements)
+- 💾 [TensorRT Engine Cache](https://gitee.com/arnoldfychen/onnxruntime/blob/master/docs/execution_providers/TensorRT-ExecutionProvider.md#specify-tensorrt-engine-cache-path)
+
+---
+
+<div align="center">
+
+## 🌐 **Edge Deployment Frameworks**
+
+![Deployment](https://img.shields.io/badge/Edge-Deployment-FF6B6B?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Frameworks](https://img.shields.io/badge/Frameworks-Multi--Platform-4ECDC4?style=for-the-badge&logo=docker&logoColor=white)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 🚀 **FastDeploy** - PaddlePaddle
+![PaddlePaddle](https://img.shields.io/badge/PaddlePaddle-FastDeploy-blue?style=for-the-badge)
+
+> 📦 Easy-to-use deployment toolbox for AI models
+
+**Resources:**
+- 💻 [FastDeploy GitHub](https://github.com/PaddlePaddle/FastDeploy)
+- 📥 [Prebuilt Libraries](https://github.com/PaddlePaddle/FastDeploy/blob/develop/docs/en/build_and_install/download_prebuilt_libraries.md)
+
+---
+
+### 💎 **DeepSparse & SparseML** - Neural Magic
+![Neural Magic](https://img.shields.io/badge/Neural_Magic-DeepSparse-purple?style=for-the-badge)
+
+> 🖥️ CPU-optimized inference with sparsity
+
+**Features:**
+- ⚡ CPU inference acceleration
+- 🔸 Sparsity-aware optimization
+- 📊 YOLOv5 CPU benchmarks
+
+**Resources:**
+- 📈 [YOLOv5 CPU Benchmark](https://neuralmagic.com/blog/benchmark-yolov5-on-cpus-with-deepsparse/)
+- 💻 [SparseML GitHub](https://github.com/neuralmagic/sparseml/tree/main)
+- 🚀 [DeepSparse GitHub](https://github.com/neuralmagic/deepsparse)
+
+</td>
+<td width="50%">
+
+### 📱 **NCNN** - Tencent
+![Tencent](https://img.shields.io/badge/Tencent-NCNN-00D9FF?style=for-the-badge)
+
+> 🎯 High-performance neural network inference for mobile
+
+**Resources:**
+- 💻 [NCNN GitHub](https://github.com/Tencent/ncnn)
+- 📖 [NCNN C++ Usage](https://github.com/Tencent/ncnn/blob/master/docs/how-to-use-and-FAQ/use-ncnn-with-alexnet.md)
+- 📱 [YoloMobile](https://github.com/wkt/YoloMobile)
+- ⭐ [Awesome NCNN](https://github.com/umitkacar/awesome-ncnn-collection)
+- 🔄 [Model Converter](https://convertmodel.com/)
+
+---
+
+### 🔧 **MACE** - Xiaomi
+![Xiaomi](https://img.shields.io/badge/Xiaomi-MACE-FF6900?style=for-the-badge)
+
+> 🤖 Mobile AI Compute Engine
+
+**Resources:**
+- 💻 [MACE GitHub](https://github.com/xiaomi/mace)
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🍎 **CoreML** - Apple
+
+![Apple](https://img.shields.io/badge/Apple-CoreML-000000?style=for-the-badge&logo=apple)
+
+> 🎨 Machine learning framework for iOS/macOS
+
+<details>
+<summary><b>📦 Click to expand CoreML resources</b></summary>
+
+<br>
+
+#### 🎨 **Model Collections**
+- 🎯 [Semantic Segmentation CoreML](https://github.com/tucan9389/SemanticSegmentation-CoreML)
+- 📚 [CoreML Models Collection](https://github.com/john-rocky/CoreML-Models#u2net)
+- ⭐ [Awesome CoreML Models](https://github.com/likedan/Awesome-CoreML-Models)
+- 🧠 [Awesome CoreML Models 2](https://github.com/SwiftBrain/awesome-CoreML-models)
+- 🎬 [RobustVideoMatting](https://github.com/PeterL1n/RobustVideoMatting)
+
+#### 🛠️ **Tools & Documentation**
+- 🔄 [PyTorch to CoreML](https://coremltools.readme.io/docs/pytorch-conversion)
+- 🔧 [CoreML Helpers](https://github.com/hollance/CoreMLHelpers)
+- 📖 [Apple ML API](https://developer.apple.com/machine-learning/api/)
+- 📊 [CoreML Performance Tool](https://github.com/vladimir-chernykh/coreml-performance)
+
+#### 🎨 **Stable Diffusion on CoreML**
+- 🔬 [Apple ML-4M](https://github.com/apple/ml-4m/)
+- 🎯 [Apple ML Stable Diffusion](https://github.com/apple/ml-stable-diffusion)
+- 📦 [Stable Diffusion 2 Base](https://huggingface.co/stabilityai/stable-diffusion-2-base)
+- 🚀 [Stability AI SD](https://github.com/Stability-AI/stablediffusion)
+- 📚 [Stable Diffusion v1.4](https://huggingface.co/CompVis/stable-diffusion-v1-4)
+- 🎬 [RunwayML SD](https://github.com/runwayml/stable-diffusion)
+- 🖼️ [Automatic1111 WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
+</details>
+
+---
+
+<div align="center">
+
+## ⚙️ **Compilers & Low-Level Frameworks**
+
+![Compilers](https://img.shields.io/badge/Compilers-Low--Level-blueviolet?style=for-the-badge&logo=llvm&logoColor=white)
+![Optimization](https://img.shields.io/badge/Hardware-Optimization-gold?style=for-the-badge&logo=arm&logoColor=black)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔧 **TVM** - Apache
+![TVM](https://img.shields.io/badge/Apache-TVM-D22128?style=for-the-badge&logo=apache)
+
+> 🎯 End-to-end deep learning compiler stack
 
 **Resources:**
 - [TVM GitHub](https://github.com/apache/tvm)
 
-### **LLVM**
-Compiler infrastructure project.
+---
+
+### 🔨 **LLVM**
+![LLVM](https://img.shields.io/badge/LLVM-Compiler-262D3A?style=for-the-badge&logo=llvm)
+
+> ⚙️ Compiler infrastructure project
 
 **Resources:**
 - [LLVM Project](https://github.com/llvm/llvm-project)
 
-### **XNNPack** - Google
-High-efficiency floating-point neural network inference operators.
+---
+
+### ⚡ **XNNPack** - Google
+![Google](https://img.shields.io/badge/Google-XNNPack-4285F4?style=for-the-badge&logo=google)
+
+> 🚀 High-efficiency floating-point neural network operators
 
 **Resources:**
 - [XNNPack GitHub](https://github.com/google/XNNPACK)
 
-### **ARM-NN**
-Inference engine for ARM platforms.
+</td>
+<td width="50%">
+
+### 🔷 **ARM-NN**
+![ARM](https://img.shields.io/badge/ARM-NN-0091BD?style=for-the-badge&logo=arm)
+
+> 💪 Inference engine for ARM platforms
 
 **Resources:**
 - [ARM-NN GitHub](https://github.com/ARM-software/armnn)
 - [ARM-NN Tutorial](https://www.youtube.com/watch?v=QuNOaFLobSg)
 
-### **CMSIS-NN**
-Efficient neural network kernels for ARM Cortex-M.
+---
+
+### 🧠 **CMSIS-NN**
+![CMSIS](https://img.shields.io/badge/ARM-CMSIS--NN-00979D?style=for-the-badge&logo=arm)
+
+> 📱 Efficient neural network kernels for ARM Cortex-M
 
 **Resources:**
 - [CMSIS-NN GitHub](https://github.com/ARM-software/CMSIS_5)
 
-### **Samsung ONE**
-On-device Neural Engine compiler.
+---
+
+### 📱 **Samsung ONE**
+![Samsung](https://img.shields.io/badge/Samsung-ONE-1428A0?style=for-the-badge&logo=samsung)
+
+> 🔧 On-device Neural Engine compiler
 
 **Resources:**
 - [ONE GitHub](https://github.com/Samsung/ONE)
 
+</td>
+</tr>
+</table>
+
 ---
 
-## 💼 Industry & Commercial Solutions
+<div align="center">
 
-### **Deeplite**
-AI-Driven Optimizer for Deep Neural Networks.
+## 💼 **Industry & Commercial Solutions**
+
+![Industry](https://img.shields.io/badge/Industry-Solutions-FF6B6B?style=for-the-badge&logo=enterprisedb&logoColor=white)
+
+</div>
+
+---
+
+### 🚀 **Deeplite**
+
+![Deeplite](https://img.shields.io/badge/Deeplite-AI_Optimizer-4ECDC4?style=for-the-badge)
+
+> 🎯 AI-Driven Optimizer for Deep Neural Networks
 
 **Focus:**
-- ✅ Faster inference
-- ✅ Smaller model size
-- ✅ Energy-efficient deployment
-- ✅ Cloud to edge optimization
-- ✅ Maintain accuracy
 
-**Resources:**
+<table>
+<tr>
+<td width="20%" align="center">⚡<br><b>Faster<br>Inference</b></td>
+<td width="20%" align="center">📦<br><b>Smaller<br>Models</b></td>
+<td width="20%" align="center">🔋<br><b>Energy<br>Efficient</b></td>
+<td width="20%" align="center">☁️<br><b>Cloud to<br>Edge</b></td>
+<td width="20%" align="center">🎯<br><b>Maintain<br>Accuracy</b></td>
+</tr>
+</table>
+
+**🔗 Resources:**
 - [Deeplite Website](https://www.deeplite.ai/)
 
 ---
 
-## 🔧 Utility Frameworks & Tools
+<div align="center">
 
-### **OpenCV**
-Computer vision library with C++ support.
+## 🔧 **Utility Frameworks & Tools**
+
+![Tools](https://img.shields.io/badge/Utility-Tools-00D9FF?style=for-the-badge&logo=hackthebox&logoColor=white)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 👁️ **OpenCV**
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-5C3EE8?style=for-the-badge&logo=opencv)
+
+> 📷 Computer vision library with C++ support
 
 **Resources:**
-- [OpenCV C++ Playlist](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
-- [Build OpenCV C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
+- 📺 [OpenCV C++ Playlist](https://www.youtube.com/playlist?list=PLUTbi0GOQwghR9db9p6yHqwvzc989q_mu)
+- 🔨 [Build OpenCV C++](https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7)
 
-### **VQRF** - Video Compression
-Vector Quantized Radiance Fields.
+</td>
+<td width="50%">
+
+### 🎬 **VQRF** - Video Compression
+![VQRF](https://img.shields.io/badge/VQRF-Video_Compression-red?style=for-the-badge&logo=youtube)
+
+> 📹 Vector Quantized Radiance Fields
 
 **Resources:**
 - [VQRF GitHub](https://github.com/AlgoHunt/VQRF)
 
+</td>
+</tr>
+</table>
+
 ---
 
-## 🖼️ Additional Model Architectures
+<div align="center">
 
-### **PP-PicoDet**
-Lightweight real-time object detector for mobile.
+## 🖼️ **Additional Model Architectures**
+
+![Models](https://img.shields.io/badge/Model-Architectures-blueviolet?style=for-the-badge&logo=pytorch&logoColor=white)
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 **PP-PicoDet**
+![PicoDet](https://img.shields.io/badge/PaddlePaddle-PicoDet-blue?style=for-the-badge)
+
+> 📱 Lightweight real-time object detector for mobile
 
 **Resources:**
 - [PP-PicoDet Paper](https://arxiv.org/pdf/2111.00902.pdf)
 
-### **EtinyNet**
-Extremely tiny network for TinyML.
+</td>
+<td width="50%">
+
+### 🔬 **EtinyNet**
+![EtinyNet](https://img.shields.io/badge/EtinyNet-TinyML-orange?style=for-the-badge&logo=arduino)
+
+> 🎯 Extremely tiny network for TinyML
 
 **Resources:**
 - [EtinyNet GitHub](https://github.com/aztc/EtinyNet)
 
+</td>
+</tr>
+</table>
+
+<div align="center">
+
 ![TinyML Architecture](./tinyML.png)
 
----
-
-## 🧠 Computing Architectures & APIs
-
-**Supported Platforms:**
-- **ARM** - Mobile & embedded processors
-- **RISC-V** - Open-source instruction set
-- **CUDA** - NVIDIA GPU computing
-- **Metal** - Apple GPU framework
-- **OpenCL** - Cross-platform parallel programming
-- **Vulkan** - Cross-platform graphics & compute API
+</div>
 
 ---
 
-## 📚 Research Papers & Academic Resources
+<div align="center">
 
-### Foundational Surveys (2024-2025)
+## 🧠 **Computing Architectures & APIs**
 
-**Edge Computing & Deep Learning:**
-- [Deep Learning With Edge Computing: A Review](https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf)
-- [Convergence of Edge Computing and Deep Learning: Comprehensive Survey](https://arxiv.org/pdf/1907.08349.pdf)
-- [Machine Learning at the Network Edge: A Survey](https://arxiv.org/pdf/1908.00080.pdf)
-- [Edge Deep Learning in Computer Vision & Medical Diagnostics](https://link.springer.com/article/10.1007/s10462-024-11033-5)
+![Computing](https://img.shields.io/badge/Computing-Architectures-gold?style=for-the-badge&logo=nvidia&logoColor=black)
 
-**TinyML Specific:**
-- [From Tiny Machine Learning to Tiny Deep Learning: A Survey (2024)](https://arxiv.org/html/2506.18927v1)
-- [EtinyNet: Extremely Tiny Network for TinyML](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
-- [Ultra-low Power TinyML System for Real-time Visual Processing at Edge](https://arxiv.org/pdf/2207.04663.pdf)
-
-**State Space Models & Efficient Architectures:**
-- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](https://arxiv.org/abs/2312.00752)
-- [Mamba-360: Survey of State Space Models](https://arxiv.org/html/2404.16112v1)
-- [eMamba: Efficient Acceleration Framework for Edge Computing](https://arxiv.org/html/2508.10370)
-
-**Vision Models:**
-- [MobileNetV4: Universal Models for the Mobile Ecosystem (ECCV 2024)](https://link.springer.com/chapter/10.1007/978-3-031-73661-2_5)
-- [Vision Transformer Models for Mobile/Edge Devices: A Survey](https://link.springer.com/article/10.1007/s00530-024-01312-0)
-- [YOLO Evolution: YOLOv5, YOLOv8, YOLO11, YOLO26](https://arxiv.org/html/2510.09653v2)
-- [YOLOv10: Real-Time End-to-End Object Detection](https://arxiv.org/pdf/2405.14458)
-
-**Model Compression & Optimization:**
-- [Comparative Analysis of Model Compression for Carbon Efficient AI (2025)](https://www.nature.com/articles/s41598-025-07821-w)
-- [Systematic Review on Neural Architecture Search (2024)](https://link.springer.com/article/10.1007/s10462-024-11058-w)
-- [Advances in Neural Architecture Search](https://academic.oup.com/nsr/article/11/8/nwae282/7740455)
-
-**Collections:**
-- [Awesome Embedded and Mobile Deep Learning](https://github.com/csarron/awesome-emdl/blob/master/README.md)
+</div>
 
 ---
 
-## 🎓 Contributing & Community
+<table align="center">
+<tr>
+<td align="center" width="16.66%">
 
-This repository serves as a comprehensive resource for AI edge computing and TinyML practitioners. Contributions, updates, and corrections are welcome!
+![ARM](https://img.shields.io/badge/ARM-0091BD?style=for-the-badge&logo=arm&logoColor=white)
 
-**Last Updated:** January 2025
-**Maintainer:** [Your GitHub Profile]
+**Mobile &<br>Embedded**
+
+</td>
+<td align="center" width="16.66%">
+
+![RISC-V](https://img.shields.io/badge/RISC--V-283272?style=for-the-badge&logo=riscv&logoColor=white)
+
+**Open-Source<br>ISA**
+
+</td>
+<td align="center" width="16.66%">
+
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+
+**NVIDIA<br>GPU**
+
+</td>
+<td align="center" width="16.66%">
+
+![Metal](https://img.shields.io/badge/Metal-000000?style=for-the-badge&logo=apple&logoColor=white)
+
+**Apple<br>GPU**
+
+</td>
+<td align="center" width="16.66%">
+
+![OpenCL](https://img.shields.io/badge/OpenCL-721412?style=for-the-badge&logo=opencl&logoColor=white)
+
+**Cross-<br>Platform**
+
+</td>
+<td align="center" width="16.66%">
+
+![Vulkan](https://img.shields.io/badge/Vulkan-AC162C?style=for-the-badge&logo=vulkan&logoColor=white)
+
+**Graphics &<br>Compute**
+
+</td>
+</tr>
+</table>
 
 ---
 
-**Keywords:** TinyML, Edge AI, Embedded ML, Model Compression, Quantization, Neural Architecture Search, YOLO, MobileNet, Transformer, State Space Models, ONNX Runtime, TensorRT, Inference Optimization
+<div align="center">
+
+## 📚 **Research Papers & Academic Resources**
+
+![Research](https://img.shields.io/badge/Research-Papers-FF6B6B?style=for-the-badge&logo=semanticscholar&logoColor=white)
+![2024-2025](https://img.shields.io/badge/Years-2024--2025-4ECDC4?style=for-the-badge&logo=academiasquare&logoColor=white)
+
+</div>
+
+---
+
+### 📖 **Foundational Surveys (2024-2025)**
+
+<details open>
+<summary><b>🔍 Click to expand research papers</b></summary>
+
+<br>
+
+#### 🌐 **Edge Computing & Deep Learning**
+- 📄 [Deep Learning With Edge Computing: A Review](https://www.cs.ucr.edu/~jiasi/pub/deep_edge_review.pdf)
+- 📄 [Convergence of Edge Computing and Deep Learning](https://arxiv.org/pdf/1907.08349.pdf)
+- 📄 [Machine Learning at the Network Edge](https://arxiv.org/pdf/1908.00080.pdf)
+- 📄 [Edge Deep Learning in CV & Medical Diagnostics](https://link.springer.com/article/10.1007/s10462-024-11033-5)
+
+#### 🔬 **TinyML Specific**
+- 📄 [From Tiny ML to Tiny DL: A Survey (2024)](https://arxiv.org/html/2506.18927v1)
+- 📄 [EtinyNet: Extremely Tiny Network](https://ojs.aaai.org/index.php/AAAI/article/download/20387/version/18684/20146)
+- 📄 [Ultra-low Power TinyML System](https://arxiv.org/pdf/2207.04663.pdf)
+
+#### ⚡ **State Space Models & Efficient Architectures**
+- 📄 [Mamba: Linear-Time Sequence Modeling](https://arxiv.org/abs/2312.00752)
+- 📄 [Mamba-360: Survey of SSMs](https://arxiv.org/html/2404.16112v1)
+- 📄 [eMamba: Efficient Edge Acceleration](https://arxiv.org/html/2508.10370)
+
+#### 👁️ **Vision Models**
+- 📄 [MobileNetV4 (ECCV 2024)](https://link.springer.com/chapter/10.1007/978-3-031-73661-2_5)
+- 📄 [ViT for Mobile/Edge Devices](https://link.springer.com/article/10.1007/s00530-024-01312-0)
+- 📄 [YOLO Evolution: v5 to YOLO26](https://arxiv.org/html/2510.09653v2)
+- 📄 [YOLOv10: Real-Time Detection](https://arxiv.org/pdf/2405.14458)
+
+#### 🔧 **Model Compression & Optimization**
+- 📄 [Model Compression for Carbon Efficient AI (2025)](https://www.nature.com/articles/s41598-025-07821-w)
+- 📄 [NAS Systematic Review (2024)](https://link.springer.com/article/10.1007/s10462-024-11058-w)
+- 📄 [Advances in Neural Architecture Search](https://academic.oup.com/nsr/article/11/8/nwae282/7740455)
+
+#### 📚 **Collections**
+- ⭐ [Awesome Embedded and Mobile Deep Learning](https://github.com/csarron/awesome-emdl/blob/master/README.md)
+
+</details>
+
+---
+
+<div align="center">
+
+## 🎓 **Contributing & Community**
+
+![Community](https://img.shields.io/badge/Community-Welcome-success?style=for-the-badge&logo=github&logoColor=white)
+![Contributions](https://img.shields.io/badge/Contributions-Open-blue?style=for-the-badge&logo=githubactions&logoColor=white)
+
+</div>
+
+---
+
+<div align="center">
+
+This repository serves as a **comprehensive resource** for AI edge computing and TinyML practitioners.
+
+**Contributions, updates, and corrections are welcome!** 🚀
+
+---
+
+### 📊 **Repository Stats**
+
+![Last Commit](https://img.shields.io/github/last-commit/umitkacar/ai-edge-computing-tiny-embedded?style=for-the-badge)
+![Contributors](https://img.shields.io/github/contributors/umitkacar/ai-edge-computing-tiny-embedded?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/umitkacar/ai-edge-computing-tiny-embedded?style=for-the-badge)
+
+---
+
+### 🏷️ **Keywords**
+
+`TinyML` • `Edge AI` • `Embedded ML` • `Model Compression` • `Quantization` • `Neural Architecture Search` • `YOLO` • `MobileNet` • `Transformer` • `State Space Models` • `ONNX Runtime` • `TensorRT` • `Inference Optimization` • `MCU` • `IoT` • `Real-Time AI`
+
+---
+
+### 📅 **Last Updated**
+**January 2025**
+
+---
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=150&section=footer&text=Thank%20You!&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=72"/>
+
+</div>
