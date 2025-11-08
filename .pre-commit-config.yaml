@@ -1,0 +1,198 @@
+# Pre-commit hooks configuration
+# See https://pre-commit.com for more information
+
+default_language_version:
+  python: python3.10
+
+default_stages: [commit, push]
+
+repos:
+  # =============================================================================
+  # Built-in hooks
+  # =============================================================================
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-toml
+      - id: check-json
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: debug-statements
+      - id: detect-private-key
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: name-tests-test
+        args: [--pytest-test-first]
+      - id: pretty-format-json
+        args: [--autofix, --indent=2, --no-sort-keys]
+
+  # =============================================================================
+  # Ruff - Ultra-fast Python linter & formatter (replaces flake8, isort, etc.)
+  # =============================================================================
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
+    hooks:
+      # Run the linter
+      - id: ruff
+        types_or: [python, pyi]
+        args: [--fix, --exit-non-zero-on-fix]
+      # Run the formatter
+      - id: ruff-format
+        types_or: [python, pyi]
+
+  # =============================================================================
+  # Black - Code formatter (backup if ruff format is not enough)
+  # =============================================================================
+  - repo: https://github.com/psf/black
+    rev: 23.11.0
+    hooks:
+      - id: black
+        language_version: python3.10
+        args: [--line-length=100]
+
+  # =============================================================================
+  # Mypy - Static type checker
+  # =============================================================================
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.7.1
+    hooks:
+      - id: mypy
+        additional_dependencies:
+          - types-requests
+          - types-PyYAML
+          - numpy
+        args:
+          - --strict
+          - --ignore-missing-imports
+          - --show-error-codes
+          - --no-warn-unused-ignores
+        exclude: ^tests/
+
+  # =============================================================================
+  # Pytest - Run tests on commit
+  # =============================================================================
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        args:
+          - tests/
+          - -v
+          - --tb=short
+          - --cov=src/ai_edge_tinyml
+          - --cov-report=term-missing
+          - --cov-fail-under=80
+        stages: [push]
+
+  # =============================================================================
+  # Security & Code Quality
+  # =============================================================================
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.5
+    hooks:
+      - id: bandit
+        args: [-c, pyproject.toml]
+        additional_dependencies: ["bandit[toml]"]
+        exclude: ^tests/
+
+  # =============================================================================
+  # Documentation
+  # =============================================================================
+  - repo: https://github.com/pycqa/pydocstyle
+    rev: 6.3.0
+    hooks:
+      - id: pydocstyle
+        additional_dependencies: [toml]
+        args:
+          - --convention=google
+        exclude: ^tests/
+
+  # =============================================================================
+  # YAML/TOML/JSON formatting
+  # =============================================================================
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.1.0
+    hooks:
+      - id: prettier
+        types_or: [yaml, toml, json, markdown]
+        exclude: ^(\.venv|venv)/
+
+  # =============================================================================
+  # Markdown linting
+  # =============================================================================
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.38.0
+    hooks:
+      - id: markdownlint
+        args: [--fix]
+
+  # =============================================================================
+  # Python upgrade syntax
+  # =============================================================================
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
+    hooks:
+      - id: pyupgrade
+        args: [--py310-plus]
+
+  # =============================================================================
+  # Remove unused imports
+  # =============================================================================
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.2.1
+    hooks:
+      - id: autoflake
+        args:
+          - --in-place
+          - --remove-all-unused-imports
+          - --remove-unused-variables
+          - --remove-duplicate-keys
+          - --ignore-init-module-imports
+
+  # =============================================================================
+  # Spell checking
+  # =============================================================================
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --ignore-words-list=crate,nd,sav,ser
+          - --skip="*.json,*.csv,*.xml,*.txt,*.lock"
+
+  # =============================================================================
+  # Commit message validation
+  # =============================================================================
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [--strict, --force-scope]
+
+# CI configuration
+ci:
+  autofix_commit_msg: |
+    🤖 Auto-fix pre-commit hooks
+
+    [pre-commit.ci] auto fixes from pre-commit.com hooks
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '🔧 [pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: [pytest]
+  submodules: false
