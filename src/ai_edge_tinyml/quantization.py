@@ -8,7 +8,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import Literal
 
 import numpy as np
 import numpy.typing as npt
@@ -132,7 +131,9 @@ class Quantizer:
             case QuantizationMode.FLOAT16:
                 return quantized_weights.astype(np.float32)
             case QuantizationMode.INT8 | QuantizationMode.INT4 | QuantizationMode.DYNAMIC:
-                return self._dequantize_int(quantized_weights)
+                # Type narrowing for mypy - quantized weights are int8 for these modes
+                int_weights = quantized_weights.astype(np.int8)
+                return self._dequantize_int(int_weights)
 
     def _quantize_int8(self, weights: npt.NDArray[np.float32]) -> npt.NDArray[np.int8]:
         """Quantize to INT8.

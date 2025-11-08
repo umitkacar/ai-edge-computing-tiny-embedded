@@ -183,8 +183,6 @@ select = [
 ignore = [
     "D100",    # Missing docstring in public module
     "D104",    # Missing docstring in public package
-    "ANN101",  # Missing type annotation for self in method
-    "ANN102",  # Missing type annotation for cls in classmethod
     "COM812",  # Trailing comma missing (conflicts with formatter)
     "ISC001",  # Implicit string concatenation (conflicts with formatter)
 ]
@@ -204,6 +202,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
     "FBT001",  # Boolean positional arg in function definition
     "PLR2004", # Magic value used in comparison
     "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "NPY002",  # Legacy numpy random calls (acceptable in tests)
 ]
 "__init__.py" = [
     "F401",    # Imported but unused

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from pathlib import Path
 from typing import TYPE_CHECKING
 
 import numpy as np
@@ -20,6 +19,8 @@ from ai_edge_tinyml.utils import (
 )
 
 if TYPE_CHECKING:
+    from pathlib import Path
+
     import numpy.typing as npt
 
 

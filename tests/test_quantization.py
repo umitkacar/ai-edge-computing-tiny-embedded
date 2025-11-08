@@ -117,7 +117,7 @@ class TestQuantizer:
         assert np.all(quantized <= 127)
 
         # Check quantization params
-        scale, zero_point = quantizer.get_quantization_params()
+        scale, _ = quantizer.get_quantization_params()
         assert scale > 0
 
     def test_quantize_dequantize_roundtrip(self, float32_array: npt.NDArray[np.float32]) -> None:
@@ -184,7 +184,11 @@ class TestQuantizer:
             QuantizationMode.DYNAMIC,
         ],
     )
-    def test_all_modes_work(self, float32_array: npt.NDArray[np.float32], mode: QuantizationMode) -> None:
+    def test_all_modes_work(
+        self,
+        float32_array: npt.NDArray[np.float32],
+        mode: QuantizationMode,
+    ) -> None:
         """Test that all quantization modes work without errors."""
         config = QuantizationConfig(mode=mode)
         quantizer = Quantizer(config)

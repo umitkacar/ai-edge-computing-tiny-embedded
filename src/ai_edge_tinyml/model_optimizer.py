@@ -8,11 +8,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
-from pathlib import Path
-from typing import Any, Protocol
+from typing import TYPE_CHECKING, Protocol
 
 import numpy as np
 import numpy.typing as npt
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 class OptimizationLevel(Enum):

@@ -11,16 +11,16 @@ __author__ = "Ümit Kacar"
 __email__ = "umitkacar@users.noreply.github.com"
 
 from ai_edge_tinyml.model_optimizer import ModelOptimizer
-from ai_edge_tinyml.quantization import Quantizer, QuantizationConfig
-from ai_edge_tinyml.utils import get_model_size, calculate_compression_ratio
+from ai_edge_tinyml.quantization import QuantizationConfig, Quantizer
+from ai_edge_tinyml.utils import calculate_compression_ratio, get_model_size
 
 __all__ = [
-    "__version__",
+    "ModelOptimizer",
+    "QuantizationConfig",
+    "Quantizer",
     "__author__",
     "__email__",
-    "ModelOptimizer",
-    "Quantizer",
-    "QuantizationConfig",
-    "get_model_size",
+    "__version__",
     "calculate_compression_ratio",
+    "get_model_size",
 ]

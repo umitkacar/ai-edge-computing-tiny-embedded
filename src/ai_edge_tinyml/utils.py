@@ -7,7 +7,6 @@ and common operations in edge AI development.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
 
 import numpy as np
 import numpy.typing as npt
@@ -174,11 +173,11 @@ def estimate_inference_time(
 
     # Simplified performance factors (ops/ms) for different devices
     device_performance: dict[str, float] = {
-        "cortex-m4": 0.5,      # Very limited performance
-        "cortex-m7": 1.0,      # Better performance
-        "esp32": 0.8,          # IoT device
-        "jetson-nano": 10.0,   # Edge AI device
-        "raspberry-pi-4": 5.0, # Single-board computer
+        "cortex-m4": 0.5,  # Very limited performance
+        "cortex-m7": 1.0,  # Better performance
+        "esp32": 0.8,  # IoT device
+        "jetson-nano": 10.0,  # Edge AI device
+        "raspberry-pi-4": 5.0,  # Single-board computer
     }
 
     performance_factor = device_performance.get(target_device.lower())
