@@ -72,23 +72,36 @@ packages = ["src/ai_edge_tinyml"]
 dependencies = [
     "pytest",
     "pytest-cov",
+    "pytest-xdist",
     "mypy",
     "ruff",
     "black",
+    "bandit[toml]",
 ]
 
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
-test-cov = "pytest --cov=src/ai_edge_tinyml --cov-report=term-missing --cov-report=html {args:tests}"
+test-cov = "pytest --cov=src/ai_edge_tinyml --cov-report=term-missing --cov-report=html --cov-report=xml {args:tests}"
+test-parallel = "pytest -n auto {args:tests}"
+test-parallel-cov = "pytest -n auto --cov=src/ai_edge_tinyml --cov-report=term-missing --cov-report=html --cov-report=xml {args:tests}"
 lint = "ruff check {args:src tests}"
+lint-fix = "ruff check --fix {args:src tests}"
 format = "black {args:src tests}"
 format-check = "black --check {args:src tests}"
 type-check = "mypy {args:src tests}"
+security = "bandit -r src -c pyproject.toml"
 all = [
     "format",
     "lint",
     "type-check",
     "test-cov",
+]
+ci = [
+    "format-check",
+    "lint",
+    "type-check",
+    "security",
+    "test-parallel-cov",
 ]
 
 # =============================================================================

@@ -79,7 +79,7 @@ repos:
         exclude: ^tests/
 
   # =============================================================================
-  # Pytest - Run tests on commit
+  # Pytest - Run tests with coverage and parallel execution
   # =============================================================================
   - repo: local
     hooks:
@@ -91,12 +91,26 @@ repos:
         always_run: true
         args:
           - tests/
+          - -n
+          - auto
           - -v
           - --tb=short
           - --cov=src/ai_edge_tinyml
           - --cov-report=term-missing
           - --cov-fail-under=80
         stages: [push]
+
+      - id: pytest-quick
+        name: pytest-quick
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        args:
+          - tests/
+          - -x
+          - --tb=short
+        stages: [commit]
 
   # =============================================================================
   # Security & Code Quality
