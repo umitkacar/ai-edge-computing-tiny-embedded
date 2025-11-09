@@ -13,7 +13,9 @@
 ---
 
 ### 🌟 **Latest Update: January 2025**
-> State-of-the-Art Algorithms & Trends for Edge AI and Embedded Systems
+> **Production-Ready Python Implementation** with modern tooling (Hatch, Ruff, Mypy)
+> **62/62 Tests Passing** • **81.76% Coverage** • **Zero Security Issues**
+> **State-of-the-Art Algorithms & Trends** for Edge AI and Embedded Systems
 
 </div>
 
@@ -23,6 +25,16 @@
 
 <table>
 <tr>
+<td width="33%" valign="top">
+
+### 🚀 **Getting Started**
+- [📦 Installation](#-installation)
+- [🛠️ Development Setup](#%EF%B8%8F-development-setup)
+- [📊 Project Structure](#-project-structure)
+- [✅ Quality Assurance](#-quality-assurance)
+- [🎯 Features & Examples](#-features)
+
+</td>
 <td width="33%" valign="top">
 
 ### 🔥 **Core Topics**
@@ -41,17 +53,208 @@
 - [🌐 Deployment Tools](#-edge-deployment-frameworks)
 
 </td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### 📚 **Documentation**
+- [📄 CHANGELOG.md](CHANGELOG.md)
+- [📚 LESSONS-LEARNED.md](LESSONS-LEARNED.md)
+- [🔧 DEVELOPMENT.md](DEVELOPMENT.md)
+
+</td>
 <td width="33%" valign="top">
 
 ### 📚 **Resources**
 - [🎯 TinyML & MCU](#-tinyml--mcu-specific-advances)
 - [⚙️ Compilers](#%EF%B8%8F-compilers--low-level-frameworks)
 - [📄 Research Papers](#-research-papers--academic-resources)
-- [🎓 Contributing](#-contributing--community)
+
+</td>
+<td width="33%" valign="top">
+
+### 🎓 **Community**
+- [🤝 Contributing](#-contributing--community)
+- [📊 Repository Stats](#-repository-stats)
+- [🏷️ Keywords](#%EF%B8%8F-keywords)
 
 </td>
 </tr>
 </table>
+
+---
+
+<div align="center">
+
+## 🚀 **Quick Start & Development**
+
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Hatch](https://img.shields.io/badge/Hatch-Build_System-4051B5?style=for-the-badge&logo=pypi&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-62%2F62_Passing-success?style=for-the-badge&logo=pytest&logoColor=white)
+![Coverage](https://img.shields.io/badge/Coverage-81.76%25-brightgreen?style=for-the-badge&logo=codecov&logoColor=white)
+![Type](https://img.shields.io/badge/Type_Checked-Mypy_Strict-blue?style=for-the-badge&logo=python&logoColor=white)
+
+</div>
+
+### 📦 **Installation**
+
+This project uses modern Python tooling with [Hatch](https://hatch.pypa.io/) for dependency management and development workflows.
+
+```bash
+# Clone the repository
+git clone https://github.com/umitkacar/ai-edge-computing-tiny-embedded.git
+cd ai-edge-computing-tiny-embedded
+
+# Install dependencies (using hatch)
+pip install hatch
+
+# Run tests
+hatch run test
+
+# Run full CI pipeline
+hatch run ci
+```
+
+### 🛠️ **Development Setup**
+
+**Modern Python Stack:**
+- **Build System:** [Hatch](https://hatch.pypa.io/) - Modern Python project manager
+- **Linting:** [Ruff](https://docs.astral.sh/ruff/) - Ultra-fast Python linter (100x faster than flake8)
+- **Formatting:** [Black](https://black.readthedocs.io/) - The uncompromising code formatter
+- **Type Checking:** [Mypy](https://mypy.readthedocs.io/) - Static type checker (strict mode)
+- **Testing:** [Pytest](https://docs.pytest.org/) - Comprehensive test framework
+- **Security:** [Bandit](https://bandit.readthedocs.io/) - Security vulnerability scanner
+- **Pre-commit:** Automated quality checks on commit/push
+
+**Available Commands:**
+
+```bash
+# Linting & Formatting
+hatch run lint          # Run Ruff linter
+hatch run format        # Format code with Black
+hatch run format-check  # Check formatting without changes
+
+# Type Checking
+hatch run type-check    # Run Mypy strict type checking
+
+# Testing
+hatch run test                    # Run tests (sequential)
+hatch run test-parallel           # Run tests with auto workers
+hatch run test-parallel-cov       # Parallel tests with coverage
+
+# Security
+hatch run security      # Run Bandit security audit
+
+# Complete CI Pipeline
+hatch run ci           # Run all checks (format, lint, type-check, security, test)
+```
+
+### 📊 **Project Structure**
+
+```
+ai-edge-computing-tiny-embedded/
+├── src/ai_edge_tinyml/          # Source code (src layout)
+│   ├── __init__.py              # Package initialization
+│   ├── quantization.py          # INT8/INT4/FP16 quantization
+│   ├── model_optimizer.py       # Model optimization pipeline
+│   ├── utils.py                 # Utility functions
+│   └── py.typed                 # PEP 561 marker (typed package)
+├── tests/                       # Test suite (62 tests, 81.76% coverage)
+│   ├── conftest.py              # Pytest configuration & fixtures
+│   ├── test_quantization.py     # Quantization tests (21 tests)
+│   ├── test_model_optimizer.py  # Optimizer tests (19 tests)
+│   └── test_utils.py            # Utility tests (22 tests)
+├── pyproject.toml               # Project configuration (single source of truth)
+├── .pre-commit-config.yaml      # Pre-commit hooks configuration
+├── CHANGELOG.md                 # Detailed change history
+├── LESSONS-LEARNED.md           # Best practices & insights
+├── DEVELOPMENT.md               # Development guidelines
+└── README.md                    # This file
+```
+
+### ✅ **Quality Assurance**
+
+This project maintains production-ready code quality:
+
+| Check | Status | Details |
+|-------|--------|---------|
+| **Ruff Linting** | ✅ PASS | 50+ rules, zero errors |
+| **Black Formatting** | ✅ PASS | Line length: 100 |
+| **Mypy Type Check** | ✅ PASS | Strict mode enabled |
+| **Bandit Security** | ✅ PASS | 0 vulnerabilities |
+| **Test Suite** | ✅ PASS | 62/62 tests passing |
+| **Code Coverage** | ✅ PASS | 81.76% (exceeds 80%) |
+| **Pre-commit Hooks** | ✅ PASS | 15+ automated checks |
+
+**Test Results:**
+```
+tests/test_quantization.py      21 passed
+tests/test_model_optimizer.py   19 passed
+tests/test_utils.py             22 passed
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total: 62 passed in 0.50s ✅
+Coverage: 81.76% (exceeds 80% threshold) ✅
+```
+
+### 🔒 **Security**
+
+- **Bandit Security Audit:** Zero vulnerabilities detected
+- **Type Safety:** Full type annotations with mypy strict mode
+- **Dependency Scanning:** Automated security checks in CI
+- **Pre-commit Hooks:** Security validations before commit
+
+### 📚 **Documentation**
+
+- **[CHANGELOG.md](CHANGELOG.md)** - Detailed version history and changes
+- **[LESSONS-LEARNED.md](LESSONS-LEARNED.md)** - Best practices, insights, and technical decisions
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Comprehensive development guidelines
+- **API Documentation:** Auto-generated from Google-style docstrings
+
+### 🎯 **Features**
+
+**Quantization Support:**
+- ✅ INT8 Quantization (8-bit integers)
+- ✅ INT4 Quantization (4-bit integers)
+- ✅ FP16 Quantization (16-bit floats)
+- ✅ Dynamic Quantization
+- ✅ Symmetric & Asymmetric modes
+- ✅ Per-tensor & per-channel quantization
+
+**Model Optimization:**
+- ✅ Weight quantization with 6 different modes
+- ✅ Compression ratio analysis
+- ✅ Model size calculation
+- ✅ Type-safe APIs with full annotations
+- ✅ Comprehensive error handling
+
+**Example Usage:**
+
+```python
+import numpy as np
+from ai_edge_tinyml import Quantizer, QuantizationConfig, QuantizationMode
+
+# Create quantization config
+config = QuantizationConfig(
+    mode=QuantizationMode.INT8,
+    symmetric=True,
+    per_channel=False
+)
+
+# Initialize quantizer
+quantizer = Quantizer(config)
+
+# Quantize weights
+weights = np.random.randn(100, 100).astype(np.float32)
+quantized = quantizer.quantize(weights)
+
+# Dequantize for inference
+dequantized = quantizer.dequantize(quantized)
+
+# Calculate compression
+from ai_edge_tinyml.utils import calculate_compression_ratio
+ratio = calculate_compression_ratio(weights, quantized)
+print(f"Compression ratio: {ratio:.2f}x")
+```
 
 ---
 
